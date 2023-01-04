@@ -10,8 +10,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint . --ext .js --ext .ts --ext .tsx --ignore-pattern 'node_modules/'",
+    "rebuild": "npm run clean && npm run build",
+    "clean": "rm -rf ./build/",
+    "clean-all": "rm -rf ./build/ ./dist/ ./node_modules/ package-lock.json",
+    "lint": "eslint .",
     "test": "react-scripts test",
+    "watch": "jest --watchAll --coverage",
+    "skipped": "jest ./src --reporters jest-skipped-reporter",
+    "licenses": "license-report --output=table --only=prod",
+    "circular": "dependency-cruise src/ electron/ ",
     "eject-danger": "react-scripts eject",
     "postinstall": "electron-builder install-app-deps",
     "electron:dev": "concurrently \"cross-env BROWSER=none npm run start\" \"wait-on http://127.0.0.1:3000 && tsc -p electron -w\" \"wait-on http://127.0.0.1:3000 && tsc -p electron && electron .\"",
@@ -48,7 +55,9 @@
     ],
     "parserOptions": {
       "ecmaVersion": 2020,
-      "project": ["tsconfig.json"] ,
+      "project": [
+        "tsconfig.json"
+      ],
       "sourceType": "module"
     }
   },
@@ -69,10 +78,12 @@
     "@typescript-eslint/parser": "^5.48.0",
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
+    "dependency-cruiser": "^12.3.0",
     "electron": "^22.0.0",
     "electron-builder": "^23.6.0",
     "electron-is-dev": "^2.0.0",
     "eslint": "8.22.0",
+    "license-report": "^6.3.0",
     "wait-on": "^7.0.1"
   },
   "dependencies": {

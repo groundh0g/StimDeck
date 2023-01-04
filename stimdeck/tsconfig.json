@@ -21,8 +21,7 @@
     "jsx": "react"
   },
   "include": [
-    "src",
-    "electron",
-    "public"
+    "src/",
+    "electron/"
   ]
 }

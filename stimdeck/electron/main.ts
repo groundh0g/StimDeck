@@ -55,15 +55,15 @@ const createWindow = () => {
     win.maximize();
     win.show();
 
-    win.loadURL(
+    void win.loadURL(
         isDev
             ? 'http://localhost:3000'
             : `file://${path.join(__dirname, '../../build/index.html')}`
     );
 
     // win.webContents.on("page-title-updated", (event, url) => {
-    view1.webContents.loadURL('https://stimulus.com/explore');
-    view2.webContents.loadURL('https://stimulus.com/groundh0g');
+    void view1.webContents.loadURL('https://stimulus.com/explore');
+    void view2.webContents.loadURL('https://stimulus.com/groundh0g');
     // });
 
     // Open the DevTools.
