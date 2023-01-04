@@ -1,4 +1,4 @@
-## Initial Commit 02JAN2023 (v0.1.0-alpha)
+## Initial Commit 02JAN2023 (v0.1.0-prototype)
 
 This is a stable build. Supports development and build for the electron app. 
 
@@ -10,6 +10,10 @@ This is a stable build. Supports development and build for the electron app.
 * includes build command for signed macOS app
 * test stubs verified to be working
 * runs as React and Electron apps
+* adds circular dependencies checking
+* adds code coverage
+* adds linting
+* adds license-report
 
 Project (private) and Issues (public) ares created and in use.
 
