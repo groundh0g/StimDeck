@@ -15,8 +15,8 @@
     "clean-all": "rm -rf ./build/ ./dist/ ./node_modules/ package-lock.json",
     "lint": "eslint .",
     "test": "react-scripts test",
-    "watch": "jest --watchAll --coverage",
-    "skipped": "jest ./src --reporters jest-skipped-reporter",
+    "test-watch": "react-scripts test --watchAll --coverage",
+    "test-skipped": "jest ./src ./electron --reporters jest-skipped-reporter",
     "licenses": "license-report --output=table --only=prod",
     "circular": "dependency-cruise src/ electron/ ",
     "eject-danger": "react-scripts eject",
@@ -83,6 +83,7 @@
     "electron-builder": "^23.6.0",
     "electron-is-dev": "^2.0.0",
     "eslint": "8.22.0",
+    "jest-skipped-reporter": "^0.0.5",
     "license-report": "^6.3.0",
     "wait-on": "^7.0.1"
   },
