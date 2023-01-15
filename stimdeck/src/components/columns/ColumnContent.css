@@ -1,0 +1,25 @@
+.colContentOuter {
+    background: darkgray;
+}
+
+.colContent {
+    min-height: calc(100vh - 100px);
+    line-height: calc(100vh - 100px);
+    width: 294px;
+    background-color: white;
+    color: maroon;
+    font-size: 2.5em;
+    font-weight: bolder;
+    margin: 3px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+html[data-theme="dark"] .colContentOuter {
+    background: magenta;
+}
+
+html[data-theme="dark"] .colContent {
+    background-color: limegreen;
+    color: white;
+}

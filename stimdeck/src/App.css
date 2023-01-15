@@ -2,37 +2,61 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  /*background-color: #282c34;*/
+  background-color: white;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: left;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*font-size: calc(10px + 2vmin);*/
+  color: darkblue;
+
+  white-space: nowrap;
+  overflow-x: auto;
+  /*overflow-x: hidden;*/
+  overflow-y: hidden;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navBar {
+  background-color: lightsteelblue;
+  color: black;
+  position: absolute;
+  top: 0;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+}
+
+.contentColumn {
+  background-color: slategray;
+  color: white;
+  margin: 3px;
+  margin-top: 45px;
+  display: inline-block;
+  width: 300px;
+}
+
+html[data-theme="dark"] .contentColumn {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+/* Based on https://stackoverflow.com/a/40511537/75696 */
+.backgroundPage {
+  background: url('background-light.png') no-repeat center center;
+  background-size: 100% auto;
+  height: 1vh;
+}
+
+html[data-theme="dark"] .backgroundPage {
+  background: url('background-dark.png') no-repeat center center;
+  background-size: 100% auto;
+  height: 1vh;
 }
