@@ -49,44 +49,12 @@ function App() {
                       <ColumnContent key="3" foo={3} />
                   </div>
               </div>
-              <div className="contentColumn column-4">
-                  <div className="contentColumnHeader">
-                      <ColumnHeader key="4" foo={4} />
-                  </div>
-                  <div className="contentColumnContent">
-                      <ColumnContent key="4" foo={4} />
-                  </div>
-              </div>
-              {/*<div className="contentColumn column-3">*/}
+              {/*<div className="contentColumn column-4">*/}
               {/*    <div className="contentColumnHeader">*/}
-              {/*        COLUMN HEADER*/}
+              {/*        <ColumnHeader key="4" foo={4} />*/}
               {/*    </div>*/}
               {/*    <div className="contentColumnContent">*/}
-              {/*        Loading ...*/}
-              {/*    </div>*/}
-              {/*</div>*/}
-              {/*<div className="contentColumn column-3">*/}
-              {/*    <div className="contentColumnHeader">*/}
-              {/*        COLUMN HEADER*/}
-              {/*    </div>*/}
-              {/*    <div className="contentColumnContent">*/}
-              {/*        Loading ...*/}
-              {/*    </div>*/}
-              {/*</div>*/}
-              {/*<div className="contentColumn column-3">*/}
-              {/*    <div className="contentColumnHeader">*/}
-              {/*        COLUMN HEADER*/}
-              {/*    </div>*/}
-              {/*    <div className="contentColumnContent">*/}
-              {/*        Loading ...*/}
-              {/*    </div>*/}
-              {/*</div>*/}
-              {/*<div className="contentColumn column-3">*/}
-              {/*    <div className="contentColumnHeader">*/}
-              {/*        COLUMN HEADER*/}
-              {/*    </div>*/}
-              {/*    <div className="contentColumnContent">*/}
-              {/*        Loading ...*/}
+              {/*        <ColumnContent key="4" foo={4} />*/}
               {/*    </div>*/}
               {/*</div>*/}
           </div>

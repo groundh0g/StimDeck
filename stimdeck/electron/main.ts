@@ -105,8 +105,8 @@ const createWindow = () => {
     });
 
     void view1.webContents.loadURL('https://stimulus.com/explore');
-    void view2.webContents.loadURL('https://stimulus.com/explore');
-    void view3.webContents.loadURL('https://stimulus.com/groundh0g');
+    void view2.webContents.loadURL('https://stimulus.com/groundh0g');
+    void view3.webContents.loadURL('https://stimulus.com/giveaways');
     //void view3.webContents.loadURL('https://www.stimulus.com/senpaithagawd');
 
     // Open the DevTools?
