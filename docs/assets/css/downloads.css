@@ -1,0 +1,120 @@
+.dl-icon {
+    font-size: 5em;
+}
+
+.download-blurbs {
+    padding-top: 20px;
+}
+
+.download-blurb {
+    float: none;
+}
+
+.download-blurb-half-width {
+    display: none;
+    float: none;
+}
+
+@media screen and (min-width: 768px) {
+    html, body {
+        width: 100%;
+        min-height: 1vh;
+        margin: 0;
+    }
+
+    .download-blurbs {
+        padding-top: 50px;
+    }
+
+    .download-blurb {
+        width: 33.3%;
+        float: left;
+    }
+
+    .download-blurb-half-width {
+        width: 16.6%;
+        display: block;
+        float: left;
+    }
+}
+
+.download-blurbs {
+    text-align: center;
+    width: 100%;
+    clear:both;
+    clear-after: left;
+}
+
+.download-blurb ul {
+    list-style: none;
+}
+
+.download-blurb ul li {
+    margin: 0;
+}
+
+.download-blurb p {
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+.download-blurb p a {
+    font-size: 0.8em;
+}
+
+i.red-heart {
+    color: red;
+}
+
+div.green-button {
+    background-color: yellowgreen;
+}
+
+.download-button {
+    margin-left: 20%;
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.download-button.disabled {
+    background-color: darkgray;
+    cursor: not-allowed;
+}
+
+.download-heading {
+    float: none;
+    clear: both;
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 75px;
+    clear:both;
+    clear-after: left;
+}
+
+.download-heading-text {
+    padding: 0 10%;
+    text-align: center;
+    clear:both;
+    clear-after: left;
+}
+
+.download-heading-text ul {
+    list-style: none;
+}
+
+.download-heading-text ul li {
+    margin: 0;
+}
+
+hr {
+    clear: both;
+    clear-after: both;
+}

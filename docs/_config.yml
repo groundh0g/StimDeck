@@ -22,11 +22,12 @@ subtitle                 : "a HUD for stimulus.com" # site tagline that appears 
 name                     : "stimdeck"
 description              : "a HUD for the stimulus.com social media site"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/" # the subpath of your site, e.g. "/blog"
+baseurl                  : # the subpath of your site, e.g. "/blog"
+#baseurl                  : "/StimDeck" # the subpath of your site, e.g. "/blog"
 repository               : "groundh0g/StimDeck" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/88x88.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "StimDeck" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -104,10 +105,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  name             : "Joseph Hall"
+  avatar           : "/assets/images/author-groundh0g.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Also known as [@groundh0g](https://www.stimulus.com/groundh0g)."
+  location         : "Newnan, GA"
   email            :
   links:
     - label: "Email"
@@ -115,16 +116,16 @@ author:
       # url: "mailto:your.name@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      # url: "https://joehall.net/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+      # url: "https://twitter.com/groundh0g"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      # url: "https://facebook.com/groundh0g"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      # url: "https://github.com/groundh0g"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -134,13 +135,13 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/groundh0g"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: "https://facebook.com/groundh0g"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/groundh0g"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -156,6 +157,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - _docs
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

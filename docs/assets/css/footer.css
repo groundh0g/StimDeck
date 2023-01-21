@@ -1,0 +1,53 @@
+.colFooterWrap {
+    clear: both;
+}
+
+.colFooterHead {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.colFooter {
+}
+
+.colFooter ul {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    list-style-type: none;
+}
+
+.colFooter li, .colFooter p {
+    margin: 0;
+    margin-left: 15px;
+    font-size: 0.8em;
+    color: darkgray;
+}
+
+.colFooter p {
+    padding-bottom: 30px;
+}
+
+.colFooter p a {
+    color: white;
+}
+
+.colFooter {
+    width: 100%;
+    float: none;
+}
+
+@media screen and (min-width: 300px) {
+    .colFooter {
+        float: left;
+        width: 49.5%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .colFooter {
+        float: left;
+        width: 24.5%;
+    }
+}
