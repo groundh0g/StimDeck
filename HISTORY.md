@@ -1,22 +1,18 @@
-## Initial Commit 02JAN2023 (v0.1.0-prototype)
+## Initial Site Stub 21JAN2023
 
-This is a stable build. Supports development and build for the electron app. 
+Includes the following: 
 
-* proof of concept application added
-* includes two hard-coded columns
-  * explore
-  * profile: @groundh0g
-* adds images and source media
-* includes build command for signed macOS app
-* test stubs verified to be working
-* runs as React and Electron apps
-* adds circular dependencies checking
-* adds code coverage
-* adds linting
-* adds license-report
-
-Project (private) and Issues (public) ares created and in use.
-
-* [Issues](https://github.com/groundh0g/StimDeck/issues)
-* [Project (req auth/access)](https://github.com/users/groundh0g/projects/1)
-
+- landing page, which needs A LOT of love
+  - TODO: add splash/landing page as root
+  - TODO: add proper blog section
+- working download pages
+  - OS detection and redirect to specific download page
+  - link to OS selector page
+  - link to OS-specifc download from the GitHub repo
+  - link to source code on GitHub
+  - link to boilerplate ZIP on GitHub
+- documentation stubs
+  - user document [STUB]
+  - developer guide [STUB]
+- footer content, which needs review
+- configured to host at stimdeck.joehall.net
