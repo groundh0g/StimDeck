@@ -24,15 +24,15 @@
 - Uses [Jekyll v3.9.2](https://jekyllrb.com/) with [Minimal Mistakes v4.24.0](https://github.com/mmistakes/minimal-mistakes/) theme.
 - Uses [github-pages](https://github.com/github/pages-gem) to ensure compatibility with [GitHub Pages](https://pages.github.com/).
 - Establishes public site at [stimdeck.joehall.net](https://stimdeck.joehall.net/).
-- Adds [first blog post](https://stimdeck.joehall.net/blog/news/2023/01/13/coming-soon/) with mockup image. Addresses #17.
-- Adds [blog archive](https://stimdeck.joehall.net/blog/archive/) (stub). Addresses #17.
-- Adds [blog archive by tag](https://stimdeck.joehall.net/blog/tags/). Addresses #17.
-- Adds [blog archive by category](https://stimdeck.joehall.net/blog/categories/). Addresses #17.
-- Adds responsive landing page with images from [unsplash.com](https://unsplash.com/). Addresses #16.
-- Adds responsive footer. Addresses #12, #13.
+- Adds [first blog post](https://stimdeck.joehall.net/blog/news/2023/01/13/coming-soon/) with mockup image. Addresses [#17](https://github.com/groundh0g/StimDeck/issues/17).
+- Adds [blog archive](https://stimdeck.joehall.net/blog/archive/) (stub). Addresses [#17](https://github.com/groundh0g/StimDeck/issues/17).
+- Adds [blog archive by tag](https://stimdeck.joehall.net/blog/tags/). Addresses [#17](https://github.com/groundh0g/StimDeck/issues/17).
+- Adds [blog archive by category](https://stimdeck.joehall.net/blog/categories/). Addresses [#17](https://github.com/groundh0g/StimDeck/issues/17).
+- Adds responsive landing page with images from [unsplash.com](https://unsplash.com/). Addresses [#16](https://github.com/groundh0g/StimDeck/issues/16).
+- Adds responsive footer. Addresses [#12](https://github.com/groundh0g/StimDeck/issues/12), [#13](https://github.com/groundh0g/StimDeck/issues/13).
 - Adds automatic detection of browser's OS with redirect to OS-specific download page.
 - Adds [choose-a-platform](https://stimdeck.joehall.net/docs/downloads/select/) page.
-- Adds [user guide](https://stimdeck.joehall.net/docs/guides/user/) (draft). Addresses #14.
-- Adds [developer guide](https://stimdeck.joehall.net/docs/guides/developer/) (draft). Addresses #15.
+- Adds [user guide](https://stimdeck.joehall.net/docs/guides/user/) (draft). Addresses [#14](https://github.com/groundh0g/StimDeck/issues/14).
+- Adds [developer guide](https://stimdeck.joehall.net/docs/guides/developer/) (draft). Addresses [#15](https://github.com/groundh0g/StimDeck/issues/15).
 - Adds [choose-a-guide](https://stimdeck.joehall.net/docs/guides/select/) page.
 - Adds [tip-the-dev](https://stimdeck.joehall.net/docs/tip-the-dev/) page.
