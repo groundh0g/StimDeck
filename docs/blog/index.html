@@ -8,4 +8,6 @@ author: Joseph Hall
 author_profile: true
 ---
 
-This is a test. Again.
+{% capture markdown %}
+Below are the most recent posts. You can also view an archive of the blog by [year]({{ site.baseurl }}/blog/archive/), [category]({{ site.baseurl }}/blog/categories/), or [tag]({{ site.baseurl }}/blog/tags/).
+{% endcapture %}{{ markdown | markdownify }}

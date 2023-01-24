@@ -8,6 +8,7 @@
 # this line allows the jekyll localhost server to accept connections from other machines on the same subnet.
 # https://stackoverflow.com/a/16608698/75696
 host: 0.0.0.0
+show_date: true
 
 # Theme Settings
 #
@@ -225,8 +226,14 @@ sass:
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
+## Outputting
+#permalink: /:categories/:slug/
+#paginate: 5 # amount of posts to show
+#paginate_path: /blog/page:num/
+#timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
 # Outputting
-permalink: /:categories/:title/
+permalink: /blog/:categories/:year/:month/:day/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /blog/page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -261,10 +268,10 @@ whitelist:
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
-  path: /categories/
+  path: /blog/categories/
 tag_archive:
   type: liquid
-  path: /tags/
+  path: /blog/tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
