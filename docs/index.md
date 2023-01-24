@@ -8,7 +8,7 @@ author_profile: false
 
 # It's a Big World
 
-I don't feel like I need to sell you on the StimDeck application. It's the content from the community that counts.
+I don't feel like I need to sell you on the StimDeck application. It's the content from the community that really matters.
 
 I'd rather tell you about [Stimulus.com](https://www.stimulus.com/ref/groundh0g), the up-and-coming social media site for the rest of us.
 

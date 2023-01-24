@@ -7,6 +7,7 @@
 
 # this line allows the jekyll localhost server to accept connections from other machines on the same subnet.
 # https://stackoverflow.com/a/16608698/75696
+
 host: 0.0.0.0
 show_date: true
 
