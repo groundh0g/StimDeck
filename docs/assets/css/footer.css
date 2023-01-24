@@ -51,3 +51,7 @@
         width: 24.5%;
     }
 }
+
+body.layout--default .page__footer {
+    margin-top: 0;
+}

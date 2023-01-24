@@ -1,0 +1,177 @@
+---
+# This CSS needs front matter to trigger liquid script parsing
+search: false
+---
+
+.landing-wrap {
+    position: relative;
+    background-image: url('{{ site.baseurl }}/assets/images/splash/landing-page-cash.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    /* https://stackoverflow.com/a/22211990 */
+    padding-top: 56.25%; /* (1440 / 2560 * 100) */
+}
+
+.landing-wrap div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    font-size: 2.2vw;
+}
+
+.landing-wrap h1 {
+    padding-top: 2vw;
+    font-size: 4.8vw;
+    font-weight: bold;
+}
+
+.content-left {
+    margin-left: 4%;
+    margin-right: 55%;
+}
+
+.content-right {
+    margin-left: 55%;
+    margin-right: 4%;
+}
+
+.landing-wrap.landing-bg-cash,
+.landing-wrap.landing-bg-sign,
+.landing-wrap.landing-bg-heart,
+.landing-wrap.landing-bg-community,
+.landing-wrap.landing-bg-voice,
+.landing-wrap.landing-bg-write,
+.landing-wrap.landing-bg-paint {
+    background-image: none;
+    background-color: white;
+}
+
+.landing-download-button {
+    margin-left: 5%;
+    width: 80%;
+    height: 2.0em;
+    line-height: 2.0em;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    /*font-size: 0.9em;*/
+    font-size: 2vw;
+    display: inline-block;
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.landing-download-button.yellow-button {
+    background-color: #FBCA04;
+}
+
+.white-text {
+    color: white;
+}
+
+.black-text {
+    color: black;
+}
+
+.landing-wrap a:link,
+.landing-wrap a:hover,
+.landing-wrap a:active,
+.landing-wrap a:visited
+{
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
+}
+
+.landing-wrap.white-text a:link,
+.landing-wrap.white-text a:hover,
+.landing-wrap.white-text a:active,
+.landing-wrap.white-text a:visited
+{
+    color: white;
+}
+
+@media screen and (min-width: 615px) {
+    .landing-wrap.landing-bg-cash {
+        background-image: url('{{ site.baseurl }}/assets/images/splash/landing-page-cash.jpg');
+    }
+
+    .landing-wrap.landing-bg-sign {
+        background-image: url('{{ site.baseurl }}/assets/images/splash/landing-page-sign.jpg');
+    }
+
+    .landing-wrap.landing-bg-heart {
+        background-image: url('{{ site.baseurl }}/assets/images/splash/landing-page-heart.jpg');
+    }
+
+    .landing-wrap.landing-bg-community {
+        background-image: url('{{ site.baseurl }}/assets/images/splash/landing-page-community.jpg');
+    }
+
+    .landing-wrap.landing-bg-voice {
+        background-image: url('{{ site.baseurl }}/assets/images/splash/landing-page-voice.jpg');
+    }
+
+    .landing-wrap.landing-bg-write {
+        background-image: url('{{ site.baseurl }}/assets/images/splash/landing-page-write.jpg');
+    }
+
+    .landing-wrap.landing-bg-paint {
+        background-image: url('{{ site.baseurl }}/assets/images/splash/landing-page-paint.jpg');
+    }
+
+    .landing-wrap {
+        padding: 0;
+        padding-top: 56.25%; /* (1440 / 2560 * 100) */
+    }
+}
+
+@media screen and (max-width: 614px) {
+    .landing-wrap {
+        position: relative;
+        padding: 0;
+        clear: both;
+        height: auto;
+    }
+
+    .landing-wrap div {
+        position: relative;
+        left: revert;
+        right: revert;
+        top: revert;
+        bottom: revert;
+        clear: both;
+    }
+
+    .content-left {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .content-right {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .white-text {
+        color: black;
+    }
+
+    .landing-wrap.white-text a:link,
+    .landing-wrap.white-text a:hover,
+    .landing-wrap.white-text a:active,
+    .landing-wrap.white-text a:visited
+    {
+        color: black;
+    }
+}

@@ -1,7 +1,7 @@
 ---
 title: "Downloads"
 permalink: /docs/downloads/
-excerpt: "The download page redirector for the Stimdeck applications."
+excerpt: "The download page redirector for the StimDeck applications."
 last_modified_at: 2023-01-18T00:00:00-00:00
 #redirect_from:
 #  - /theme-setup/

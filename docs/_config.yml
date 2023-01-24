@@ -5,6 +5,10 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# this line allows the jekyll localhost server to accept connections from other machines on the same subnet.
+# https://stackoverflow.com/a/16608698/75696
+host: 0.0.0.0
+
 # Theme Settings
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
@@ -16,9 +20,9 @@ minimal_mistakes_skin    : "contrast" # "default", "air", "aqua", "contrast", "d
 
 # Site Settings
 locale                   : "en-US"
-title                    : "stimdeck"
-title_separator          : "-"
-subtitle                 : "a HUD for stimulus.com" # site tagline that appears below site title in masthead
+title                    : # "stimdeck"
+title_separator          : # "-"
+subtitle                 : # "a HUD for stimulus.com" # site tagline that appears below site title in masthead
 name                     : "stimdeck"
 description              : "a HUD for the stimulus.com social media site"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -26,8 +30,8 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 #baseurl                  : "/StimDeck" # the subpath of your site, e.g. "/blog"
 repository               : "groundh0g/StimDeck" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/88x88.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "StimDeck" # overrides the website title displayed in the masthead, use " " for no title
+logo                     : "/assets/images/github-social-site-header.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # "StimDeck" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -133,6 +137,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Stimulus"
+      icon: "fas fa-fw fa-comments-dollar"
+      url: "https://www.stimulus.com/groundh0g"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/groundh0g"
@@ -221,7 +228,7 @@ sass:
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate_path: /blog/page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 

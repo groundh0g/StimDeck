@@ -1,7 +1,7 @@
 ---
 title: "Download for MacOS"
 permalink: /docs/downloads/macos/
-excerpt: "The download page for the Stimdeck applications on MacOS."
+excerpt: "The download page for the StimDeck applications on MacOS."
 last_modified_at: 2023-01-18T00:00:00-00:00
 #redirect_from:
 #  - /theme-setup/

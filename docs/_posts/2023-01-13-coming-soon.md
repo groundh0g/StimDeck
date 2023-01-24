@@ -17,4 +17,4 @@ The developers have rightly decided to focus on building new features over other
 
 ![an early mockup of stimdeck]({{site.baseurl}}/assets/images/posts/stimdeck-mockup.png)
 
-Stimdeck is a heads-up display (HUD) for Stimulus that allows users to view several feeds simultaneously. Due to technical constraints, stimdeck is not a web app. It's a desktop application that pulls the site's live content into what are basically mobile-frindly, narrow columns that can be viewed side-by-side.
+StimDeck is a heads-up display (HUD) for Stimulus that allows users to view several feeds simultaneously. Due to technical constraints, stimdeck is not a web app. It's a desktop application that pulls the site's live content into what are basically mobile-frindly, narrow columns that can be viewed side-by-side.
