@@ -42,14 +42,44 @@ You can run this application as you would any other.
 
 Blah, blah, blah, blah, blah, ...
 
-### Blacklisting Terms
-
-Blah, blah, blah, blah, blah, ...
-
 > <i class="fas fa-solid fa-person-digging dl-icon"></i><br/>
 > 
 > <strong>NOTE: </strong> This section is under construction.<br/>
 > <strong class="white-text">NOTE: </strong>More content coming soon ...
+
+### Adding a Column
+
+Blah, blah, blah, blah, blah, ...
+
+### Is it Updating?
+
+Blah, blah, blah, blah, blah, ...
+
+### Modifying a Column
+
+Blah, blah, blah, blah, blah, ...
+
+### Removing a Column
+
+Blah, blah, blah, blah, blah, ...
+
+### Blacklisting Terms
+
+Stimulus.com is making great strides in suppressing spam posts. But their algorithms aren't perfect (yet). If you have specific words or phrases that you'd rather not see, you can use a nifty feature of StimDeck to suppress those posts.
+
+Blah, blah, blah, blah, blah, ...
+
+### Logging In
+
+Honestly, there's not much you can't do without logging in. Sometimes, it's nice you see your personalized view of the [Stimulus.com](https://stimulus.com/) site, though. To view your home feed, your notifications, or the giveaways that you've entered, you'll need to login.
+
+By default, StimDeck doesn't require you to login. In fact, it take steps to prevent the login buttons from appearing so that the unauthenticated (anonymous) experience is more streamlined. To trigger a login, you simply need to take any action that would result in prompting you to login. Some examples of such actions are: liking a post, restimming a post, commenting on a post, or entering a giveaway.
+
+If you just want to login, and don't want to take any action that would appear in your timeline, click the "hamburger" icon in the top, left of the column view. You'll be presented with the typical "Create an account" and "Log in" buttons. Once signed in, the top, left icon should be replaced with your avatar.
+
+### Logging Out
+
+If you're logged in, you'll see your avatar in the top, left of the column view. Tap it, scroll down to the bottom of the resulting menu, thhen click the "Log out" menu item. Once logged out, the top, left icon should return to the generic "hamburger" icon.
 
 ## Frequetly Asked Questions
 
