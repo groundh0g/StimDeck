@@ -1,6 +1,8 @@
 ---
 title: "The New Site is Live!"
 excerpt_separator: "<!--more-->"
+header:
+  teaser: "/assets/images/posts/teaser-coming-new-site-is-live.png"
 categories:
   - news
 tags:
@@ -19,4 +21,6 @@ At this stage of the game, it's worth repeating the previous post's status and r
 > 
 > ![an early mockup of stimdeck]({{site.baseurl}}/assets/images/posts/stimdeck-mockup-2.png)
 > 
-> StimDeck is a heads-up display (HUD) for Stimulus.com that allows users to view several feeds simultaneously. Due to technical constraints, stimdeck is not a web app. It's a desktop application that pulls the site's live content into what are basically mobile-friendly, narrow columns that can be viewed side-by-side.
+> StimDeck is a heads-up display (HUD) for [Stimulus.com](https://www.stimulus.com/ref/groundh0g) that allows users to view several feeds simultaneously. Due to technical constraints, stimdeck is not a web app. It's a desktop application that pulls the site's live content into what are basically mobile-friendly, narrow columns that can be viewed side-by-side.
+> 
+> **NOTE:** StimDeck is the unofficial HUD for Simulus.com. This project **is not** affiliated with or endorsed by Sticker Mule, Stimulus, their subsidiaries, employees, associates, vendors, families, or pets. It's a simple app created by one of their users &mdash; [@groundh0g](https://www.stimulus.com/groundh0g).
