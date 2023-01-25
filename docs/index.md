@@ -66,7 +66,7 @@ You'll find many creators of various sorts at [Stimulus.com](https://www.stimulu
 
 # #2: Win Cash
 
-Created by the folks at [Sticker Mule](https://www.stickermule.com/), the main hook for [Stimulus.com](https://www.stimulus.com/ref/groundh0g) is the frequent cash giveaways. Just like, share, or reply to be enterd into random drawings that last from hours to days.
+Created by the folks at [Sticker Mule](https://www.stickermule.com/), the main hook for [Stimulus.com](https://www.stimulus.com/ref/groundh0g) is the frequent cash giveaways. Just like, share, or reply to be entered into random drawings that last from hours to days.
 
 Most of the contests range from $100-$500. With the majority being at each end of that spectrum. You can even host your own giveaways.
 
