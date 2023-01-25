@@ -13,10 +13,10 @@ It's been a while in the making, but the new site is finally live. It's built on
 
 <!--more-->
 
-At this stage of the game, it's worth repeating the previous post's status and rationale for StimDeck. Of course, I couldn't resist fixing several typos while I was at quoting the post.
+At this stage of the game, it's worth repeating the previous post's status and rationale for StimDeck. Of course, I couldn't resist fixing several typos and updating the mockup image while I was quoting [the original post]({{ site.baseurl }}/blog/news/2023/01/13/coming-soon/).
  
 > The developers at [Stimulus.com](https://www.stimulus.com/ref/groundh0g) have rightly decided to focus on building new features over other tasks like creating mobile apps or an API for the new platform. I missed the multi-feed site viewer that's available on the blue-bird site, though. So, I decided to make one. That was the inspiration for and the genesis of StimDeck.
 > 
-> ![an early mockup of stimdeck]({{site.baseurl}}/assets/images/posts/stimdeck-mockup.png)
+> ![an early mockup of stimdeck]({{site.baseurl}}/assets/images/posts/stimdeck-mockup-2.png)
 > 
 > StimDeck is a heads-up display (HUD) for Stimulus.com that allows users to view several feeds simultaneously. Due to technical constraints, stimdeck is not a web app. It's a desktop application that pulls the site's live content into what are basically mobile-friendly, narrow columns that can be viewed side-by-side.

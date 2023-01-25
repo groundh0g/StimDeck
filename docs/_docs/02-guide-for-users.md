@@ -135,6 +135,8 @@ I can't anticipate every query that you'll have, but the following are the quest
   Hashtags were an early feature of the site, but they're not as widely used as on the blue-bird site. Some of my favorites are:
   - [#dailystim](https://www.stimulus.com/search/keyword?q=%23dailystim&tab=stims) &mdash; general topics on analog and digital life
   - [#fauxcabulary](https://www.stimulus.com/search/keyword?q=%23fauxcabulary&tab=stims) &mdash; terrible puns and wordplay by yours truly
+  - [#photography](https://www.stimulus.com/search/keyword?q=%23photography&tab=stims) &mdash; pics from creators
+  - [#painting](https://www.stimulus.com/search/keyword?q=%23painting&tab=stims) &mdash; art from creators
   - [#drawing](https://www.stimulus.com/search/keyword?q=%23drawing&tab=stims) &mdash; art from creators
   - [#writing](https://www.stimulus.com/search/keyword?q=%23writing&tab=stims) &mdash; text and prose from creators
   - [#gamedev](https://www.stimulus.com/search/keyword?q=%23gamedev&tab=stims) &mdash; game programming stims from creators
