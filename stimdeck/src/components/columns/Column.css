@@ -1,0 +1,25 @@
+.col-content-wrapper {
+    margin-top: 45px;
+    background: transparent;
+    display: inline-block;
+    float: none;
+    clear-after: both;
+}
+
+html[data-theme="light"] .col-content-wrapper {
+    background: cyan;
+}
+
+html[data-theme="dark"] .col-content-wrapper {
+    background: yellow;
+}
+
+html[data-theme="light"] .col-content {
+    background-color: magenta;
+    color: black;
+}
+
+html[data-theme="dark"] .col-content {
+    background-color: cornflowerblue;
+    color: white;
+}

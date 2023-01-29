@@ -1,47 +1,41 @@
 import React, {Component} from "react";
 
+import { ColumnType } from './Types';
+
 import "../fontawesome/css/all.css";
 import "./ColumnHeader.css";
 
-type ContentTypeUnAuthenticated = "explore" | "giveaways" | "profile" | "keywords" | "hashtag";
-type ContentTypeAuthenticated = "home" | "notifications"; // home === '/feed/latest'
-type ContentType = ContentTypeUnAuthenticated | ContentTypeAuthenticated | undefined;
-
 type ColumnHeaderProps = {
-    foo: number;
+    colType: ColumnType;
 };
 
-type ColumnHeaderState = {
-    foo: number;
+type ColumnHeaderState = ColumnHeaderProps & {
+    // add more attributes here ...
 };
 
 export class ColumnHeader extends Component<ColumnHeaderProps, ColumnHeaderState> {
     state: ColumnHeaderState = {
-        foo: 0,
+        colType: "explore",
     };
 
     constructor(props: ColumnHeaderProps) {
         super(props);
 
-        // this.state.foo = this.props.foo;
+        this.state.colType = this.props.colType;
     }
 
     render() {
         return (
-            <div className="colHeader">
-                {/*<button className="colButton"><i className="fa-solid fa-left-long"></i></button>*/}
-                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-                <button className="colButton" onClick={(event) => { // @ts-ignore
-                    document.querySelector("html").dataset.theme = "light"; }}><i className="fa-solid fa-rotate"></i></button>
-                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-                <button className="colButton" onClick={(event) => { // @ts-ignore
-                    document.querySelector("html").dataset.theme = "dark"; }}><i className="fa-solid fa-up-long"></i></button>
+            <div className="col-bar">
+                <div className="col-button col-float-right"><i className="fas fa-solid fa-sliders"></i></div>
+                <div className="col-button col-float-left"><i className="fas fa-solid fa-rotate-right"></i></div>
+                <div className="col-title"><i className="fas fa-solid fa-user"></i>&nbsp;&nbsp;@groundh0g</div>
 
-                <span className="colTitle">@groundh0g</span>
-
-                <button className="colButton"><i className="fa-solid fa-right-left"></i></button>
-                <button className="colButton"><i className="fa-solid fa-gear"></i></button>
-                <button className="colButton"><i className="fa-regular fa-trash-can"></i></button>
+                {/*<button className="colButton" onClick={(event) => { // @ts-ignore*/}
+                {/*    document.querySelector("html").dataset.theme = "light"; }}><i className="fa-solid fa-rotate"></i></button>*/}
+                {/*/!* eslint-disable-next-line @typescript-eslint/ban-ts-comment *!/*/}
+                {/*<button className="colButton" onClick={(event) => { // @ts-ignore*/}
+                {/*    document.querySelector("html").dataset.theme = "dark"; }}><i className="fa-solid fa-up-long"></i></button>*/}
             </div>
         );
     }

@@ -1,10 +1,6 @@
-.colContentOuter {
-    background: darkgray;
-}
-
-.colContent {
-    min-height: calc(100vh - 100px);
-    line-height: calc(100vh - 100px);
+.col-content {
+    min-height: calc(100vh - 105px);
+    line-height: calc(100vh - 105px);
     width: 294px;
     background-color: white;
     color: maroon;
@@ -13,13 +9,79 @@
     margin: 3px;
     text-align: center;
     vertical-align: middle;
+    border: 3px solid black;
+    border-top: none;
+    margin-top: 0;
 }
 
-html[data-theme="dark"] .colContentOuter {
-    background: magenta;
+.col-content.col-size-x-small {
+    width: 244px;
 }
 
-html[data-theme="dark"] .colContent {
-    background-color: limegreen;
+.col-content.col-size-medium {
+    width: 394px;
+}
+
+.col-content.col-size-large {
+    width: 494px;
+}
+
+.col-content.col-size-x-large {
+    width: 594px;
+}
+
+/*html[data-theme="light"] .col-content {*/
+/*    background-color: magenta;*/
+/*    color: black;*/
+/*}*/
+
+/*html[data-theme="dark"] .col-content {*/
+/*    background-color: cornflowerblue;*/
+/*    color: white;*/
+/*}*/
+
+.app[data-theme="light"] .col-content {
+    background-color: magenta;
+    color: black;
+}
+
+.app[data-theme="dark"] .col-content {
+    background-color: cornflowerblue;
     color: white;
 }
+
+.app[data-theme="dark"] .col-content {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.app[data-theme="red"] .col-content {
+    background-color: darkred;
+    color: white;
+}
+
+.app[data-theme="blue"] .col-content {
+    background-color: darkblue;
+    color: white;
+}
+
+.app[data-theme="green"] .col-content {
+    background-color: darkgreen;
+    color: white;
+}
+
+.app[data-theme="purple"] .col-content {
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.app[data-theme="yellow"] .col-content {
+    background-color: goldenrod;
+    color: white;
+}
+
+.app[data-theme="orange"] .col-content {
+    background-color: darkorange;
+    color: white;
+}
+

@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import { Theme } from "./components/columns/Types";
+import {setColumnSize, setTheme} from './AppFunctions';
+import {SetColumnSizeFunction, SetThemeFunction} from "./components/columns/Types";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App theme="light" columnSize="small"
+         setTheme={setTheme as SetThemeFunction}
+         setColumnSize={setColumnSize as SetColumnSizeFunction} />
   </React.StrictMode>
 );
 

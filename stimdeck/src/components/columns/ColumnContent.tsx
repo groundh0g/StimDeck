@@ -19,15 +19,13 @@ export class ColumnContent extends Component<ColumnContentProps, ColumnContentSt
     constructor(props: ColumnContentProps) {
         super(props);
 
-        // this.state.foo = this.props.foo;
+        this.state.foo = this.props.foo;
     }
 
     render() {
         return (
-            <div className="colContentOuter">
-                <div className="colContent">
-                    Loading ...
-                </div>
+            <div className="col-content">
+                Loading ...
             </div>
         );
     }
