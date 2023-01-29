@@ -16,7 +16,9 @@ On main navigation bar, implement the following features:
  */
 
 
-const foo = `
+import {ColumnSize, Theme} from "./components/columns/Types";
+
+/*
 Theme:          [DROPDOWN]
 Column Size:    [DROPDOWN]
 Reload All:  [RELOAD COLS]
@@ -29,9 +31,7 @@ Whitelist:
   Users:            [EDIT]
   Followers:      [YES/NO]
   Following:      [YES/NO]
-`;
-
-import {ColumnSize, Theme} from "./components/columns/Types";
+*/
 
 export type BlacklistOptions = {
     keywords: string[],

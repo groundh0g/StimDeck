@@ -1,7 +1,7 @@
 import { app, BrowserWindow, BrowserView } from 'electron';
 import * as path from 'path';
-import NativeImage = Electron.NativeImage;
-import ToDataURLOptions = Electron.ToDataURLOptions;
+// import NativeImage = Electron.NativeImage;
+// import ToDataURLOptions = Electron.ToDataURLOptions;
 import {
     SCRIPT_SET_THEME,
     SCRIPT_STRIP_HEADER,
@@ -115,17 +115,17 @@ const createWindow = () => {
         win.webContents.closeDevTools();
     }
 
-    const captureWebViewContentsAsDataUrl = async (view: BrowserView) => {
-        let imageDataUrl = "";
-        await view.webContents
-            .capturePage()
-            .then(img => { imageDataUrl = "data:image/png;base64," + img.toPNG().toString("base64"); })
-            .catch((e: Error) => {
-                console.error(`There was a problem capturing the '${view.webContents.getTitle()}' browser view.\nERROR: ${e.message}`);
-                imageDataUrl = "";
-            });
-        return imageDataUrl;
-    };
+    // const captureWebViewContentsAsDataUrl = async (view: BrowserView) => {
+    //     let imageDataUrl = "";
+    //     await view.webContents
+    //         .capturePage()
+    //         .then(img => { imageDataUrl = "data:image/png;base64," + img.toPNG().toString("base64"); })
+    //         .catch((e: Error) => {
+    //             console.error(`There was a problem capturing the '${view.webContents.getTitle()}' browser view.\nERROR: ${e.message}`);
+    //             imageDataUrl = "";
+    //         });
+    //     return imageDataUrl;
+    // };
 
     const stripMobileHeader = (view: BrowserView) => {
         void view.webContents.executeJavaScript(SCRIPT_STRIP_HEADER);

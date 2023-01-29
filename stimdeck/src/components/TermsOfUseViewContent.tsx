@@ -1,4 +1,4 @@
-const content = (version: string) => `
+export const content = (version: string) => `
 # Terms of Service (My Summary)
 
 Stimulus.com is a growing social media community. I'll summarize their terms of service here, but you really need to read their entire text before you decide to do anything other than interact with the site as a normal user.
@@ -13,5 +13,3 @@ The full description of the binding rules and regulations can be found at the fo
 
 * [Stimulus.com Terms of Service](https://www.stimulus.com/resources/tos)
 `;
-
-export default {content};

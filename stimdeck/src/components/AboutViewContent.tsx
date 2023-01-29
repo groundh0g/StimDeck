@@ -1,4 +1,4 @@
-const content = (version: string) => `
+export const content = (version: string) => `
 # About StimDeck
 
 StimDeck is a cross-platform desktop application for near real-time tracking of stims and organizing views of your favorite [Stimulus.com](https://www.stimulus.com/) feeds.
@@ -62,5 +62,3 @@ Thanks to the folks who helped make this possible.
 * [Background image by rawpixel.com on Freepik](https://www.freepik.com/free-vector/social-media-icons_4120018.htm#query=social%20media%20background&position=2&from_view=search&track=ais)
 
 `;
-
-export default {content};
