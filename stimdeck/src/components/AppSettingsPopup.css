@@ -11,7 +11,7 @@
     right: 20px;
     z-index: 200;
 
-    max-height: 75vh;
+    max-height: 90vh;
     overflow-y: auto;
 }
 
@@ -110,7 +110,7 @@
     /*float: right;*/
     /*margin-left: 5px;*/
 
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .nav-settings-button-bottom-row .nav-settings-button {
@@ -235,4 +235,12 @@
 
 .nav-settings-button-bottom-row {
     padding-top: 10px;
+}
+
+.nav-settings-close-button {
+    color: white;
+    margin-right: 10px;
+    float: right;
+    clear-after: both;
+    cursor: pointer;
 }

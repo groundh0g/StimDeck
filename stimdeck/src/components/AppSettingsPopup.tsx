@@ -73,7 +73,8 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
     render() {
         return (
             <div className="nav-settings-popup hidden">
-                <div className="nav-settings-popup-heading">Application Settings</div>
+                <div className="nav-settings-popup-heading">Application Settings <span className="nav-settings-close-button"><i
+                    className="fa-solid fa-rectangle-xmark"> </i></span></div>
 
                 <div className="nav-settings-instructions">Scroll down to see all options,<br/>and to save your changes.</div>
 
