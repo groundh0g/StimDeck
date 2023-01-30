@@ -1,0 +1,238 @@
+.nav-settings-popup {
+    width: 330px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: lightgray;
+    color: black;
+    text-align: left;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 200;
+
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.nav-settings-popup table,
+.nav-settings-popup tr,
+.nav-settings-popup td
+{
+    padding: 0;
+    margin: 0;
+    /*border: 1px solid black;*/
+    border: none;
+}
+
+.nav-settings-popup-heading {
+    height: 30px;
+    line-height: 30px;
+    background-color: gray;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.nav-settings-row td.nav-settings-right {
+    text-align: right;
+}
+
+.nav-settings-right {
+    min-width: 100px;
+}
+
+.nav-settings-right select {
+    width: 100%
+}
+
+.nav-settings-fill {
+    width: 100%;
+}
+
+.nav-settings-button-row {
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    padding-top: 15px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.nav-settings-button-row-filler {
+    height: 40px;
+    line-height: 40px;
+}
+
+/*nav-settings-button-row {*/
+
+/*}*/
+
+.theme-select {
+    /*height: 34px;*/
+    /*line-height: 34px;*/
+}
+
+.nav-settings-row input {
+    /*font-size: 1.1em;*/
+    padding: 4px 2px;
+    text-align: right;
+    width: 110px;
+}
+
+.nav-settings-row select {
+    /*font-size: 1.1em;*/
+    padding: 4px 2px;
+}
+
+.nav-settings-row option {
+    font-size: 1.1em;
+}
+
+.nav-settings-button {
+    background-color: cornflowerblue;
+    width: 120px;
+}
+
+.nav-settings-button-bottom-row, /*.nav-settings-button-row,*/ .nav-settings-button {
+    /*background-color: cornflowerblue;*/
+    color: white;
+    padding: 0;
+    border-radius: 10px;
+    text-align: center;
+
+    height: 34px;
+    line-height: 34px;
+
+    /*width: 100px;*/
+    /*float: right;*/
+    /*margin-left: 5px;*/
+
+    cursor: pointer;
+}
+
+.nav-settings-button-bottom-row .nav-settings-button {
+    /*float: right;*/
+    /*margin-top: 10px;*/
+    cursor: pointer;
+    width: 90px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.nav-settings-instructions {
+    padding-top: 7px;
+    font-size: 0.9em;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 0.8em;
+    text-align: center;
+}
+
+.nav-settings-button.yellow-button {
+    background-color: #F9D978;
+    border: 1px solid black;
+    color: black;
+}
+
+.nav-settings-button.green-button {
+    background-color: #9DC284;
+    border: 1px solid black;
+    color: white;
+}
+
+.nav-settings-button.blue-button {
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    color: white;
+}
+
+.nav-settings-button.gray-button {
+    background-color: darkgray;
+    border: 1px solid black;
+    color: white;
+}
+
+
+.nav-settings-button.red-button {
+    background-color: #D16D6A;
+    border: 1px solid black;
+    color: black;
+}
+
+/*.nav-settings-button-bottom-row {*/
+/*    background-color: cornflowerblue;*/
+/*    color: white;*/
+/*    padding: 0;*/
+/*    border-radius: 10px;*/
+/*    text-align: center;*/
+
+/*    height: 34px;*/
+/*    line-height: 34px;*/
+
+/*    float: right;*/
+/*    width: 100px;*/
+/*}*/
+
+/*.nav-settings-button-bottom-row {*/
+/*    background-color: cornflowerblue;*/
+/*    color: white;*/
+/*    padding: 0;*/
+/*    border-radius: 10px;*/
+/*    text-align: center;*/
+
+/*    height: 34px;*/
+/*    line-height: 34px;*/
+
+/*    float: right;*/
+/*    width: 40%;*/
+/*}*/
+
+
+.nav-button {
+    background-color: black;
+    border-radius: 7px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.nav-settings-button-info {
+    background-color: transparent;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+
+    height: 34px;
+    line-height: 34px;
+
+    display: inline-block;
+    cursor: pointer;
+
+    width: 30%;
+    /*clear-after: both;*/
+}
+
+.nav-settings-right {
+    /*content-align: right;*/
+}
+
+.nav-float-right {
+    float: right;
+}
+
+.nav-float-clear {
+    clear-after: both;
+}
+
+.nav-settings-button-bottom-row {
+    padding-top: 10px;
+}

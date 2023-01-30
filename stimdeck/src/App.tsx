@@ -19,9 +19,9 @@ type AppState = AppProps & {
 export default class App extends Component<AppProps, AppState> {
     state: AppState = {
         theme: "light",
-        setTheme: ((self, event, theme) => { /**/ }) as SetThemeFunction,
+        setTheme: ((self, event, theme) => { self.setState({theme: theme}) }) as SetThemeFunction,
         columnSize: "small",
-        setColumnSize: ((self, event, size) => { /**/ }) as SetColumnSizeFunction,
+        setColumnSize: ((self, event, size) => { self.setState({columnSize: size}) }) as SetColumnSizeFunction,
     };
 
     constructor(props: AppProps) {

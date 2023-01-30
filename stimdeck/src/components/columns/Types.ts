@@ -71,3 +71,15 @@ export type ColumnSize = "x-small" | "small" | "medium" | "large" | "x-large";
 
 export type SetThemeFunction = (app: React.Component, event: React.UIEvent, currentTheme: Theme, theme?: Theme) => void;
 export type SetColumnSizeFunction = (app: React.Component, event: React.UIEvent, colSize: ColumnSize) => void;
+export type DoActionFunction = (app: React.Component) => void;
+export type SetBlacklistValuesFunction = (app: React.Component, keywords: string[], maxHashtags: number, maxMentions: number) => void;
+export type SetWhitelistValuesFunction = (app: React.Component, users: string[], followers: boolean, following: boolean) => void;
+
+// Blacklist:
+//     Keywords:         [EDIT]
+//     Max Hashtags:     [9999]
+//     Max Mentions:     [9999]
+// Whitelist:
+//     Users:            [EDIT]
+//     Followers:      [YES/NO]
+//     Following:      [YES/NO]

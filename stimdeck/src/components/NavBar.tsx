@@ -2,7 +2,15 @@ import React, {Component} from "react";
 
 import "./fontawesome/css/all.css";
 import "./NavBar.css";
-import {Theme, SetThemeFunction, ColumnSize, SetColumnSizeFunction} from "./columns/Types";
+import {
+    Theme,
+    SetThemeFunction,
+    ColumnSize,
+    SetColumnSizeFunction,
+    SetBlacklistValuesFunction,
+    SetWhitelistValuesFunction, DoActionFunction
+} from "./columns/Types";
+import {AppSettingsPopup} from "./AppSettingsPopup";
 
 type NavBarProps = {
     theme: Theme;
@@ -18,6 +26,10 @@ type NavBarState = NavBarProps & {
 
 const emptySetColumnSize: SetColumnSizeFunction = (() => { /**/ });
 const emptySetTheme: SetThemeFunction = (() => { /**/ });
+const emptyReloadAllColumns: DoActionFunction = (() => { /**/ });
+const emptyCloseAllColumns: DoActionFunction = (() => { /**/ });
+const emptySetBlacklistValues: SetBlacklistValuesFunction = (() => { /**/ });
+const emptySetWhitelistValues: SetWhitelistValuesFunction = (() => { /**/ });
 
 export class NavBar extends Component<NavBarProps, NavBarState> {
 
@@ -48,6 +60,15 @@ export class NavBar extends Component<NavBarProps, NavBarState> {
                          this.props.setTheme(this, event, this.state.theme) }><i className="fas fa-solid fa-plus"> </i></div>
                 <div className="nav-title">StimDeck - a HUD for Stimulus.com</div>
 
+                <AppSettingsPopup
+                    theme={"light"}
+                    columnSize={"small"}
+                    setTheme={emptySetTheme}
+                    setColumnSize={emptySetColumnSize}
+                    reloadAllColumns={emptyReloadAllColumns}
+                    closeAllColumns={emptyCloseAllColumns}
+                    setBlacklistValues={emptySetBlacklistValues}
+                    setWhitelistValues={emptySetWhitelistValues} />
 
                 {/*<button className="colButton" onClick={(event) => { // @ts-ignore*/}
                 {/*    document.querySelector("html").dataset.theme = "light"; }}><i className="fa-solid fa-rotate"></i></button>*/}
