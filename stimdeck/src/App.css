@@ -14,12 +14,55 @@
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
+  background-color: white;
+  color: black;
 }
 
-html[data-theme="dark"] .page-background {
+.app[data-theme="dark"] .page-background {
   background: url('background-dark.png') no-repeat center center;
+  background-color: gray;
+  color: lightgray;
 }
 
-html[data-theme="light"] .page-background {
+.app[data-theme="light"] .page-background {
   background: url('background-light.png') no-repeat center center;
+  background-color: white;
+  color: black;
 }
+
+.app[data-theme="red"] .page-background {
+  background: url('background-red.png') no-repeat center center;
+  background-color: pink;
+  color: maroon;
+}
+
+.app[data-theme="green"] .page-background {
+  background: url('background-green.png') no-repeat center center;
+  background-color: yellowgreen;
+  color: darkgreen;
+}
+
+.app[data-theme="blue"] .page-background {
+  background: url('background-blue.png') no-repeat center center;
+  background-color: lightblue;
+  color: navy;
+}
+
+.app[data-theme="yellow"] .page-background {
+  background: url('background-yellow.png') no-repeat center center;
+  background-color: palegoldenrod;
+  color: darkgoldenrod;
+}
+
+.app[data-theme="orange"] .page-background {
+  background: url('background-orange.png') no-repeat center center;
+  background-color: #FDE09B;
+  color: darkorange;
+}
+
+.app[data-theme="purple"] .page-background {
+  background: url('background-purple.png') no-repeat center center;
+  background-color: lavender;
+  color: rebeccapurple;
+}
+

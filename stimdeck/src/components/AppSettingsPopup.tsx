@@ -39,18 +39,18 @@ const tooltipValues : TooltipValues = {
 
 export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettingsPopupState> {
 
-    state: AppSettingsPopupState = {
-        theme: "light",
-        columnSize: "small",
+    state = {
+        theme: "light" as Theme,
+        columnSize: "small" as ColumnSize,
         themeChanged: emptySetTheme,
         columnSizeChanged: emptySetColumnSize,
         reloadAllColumns: emptyDoAction,
         closeAllColumns: emptyDoAction,
         saveChanges: emptyDoAction,
-        blacklistKeywords: [],
+        blacklistKeywords: [] as string[],
         blacklistMaxHashtags: 9999,
         blacklistMaxMentions: 9999,
-        whitelistUsers: [],
+        whitelistUsers: [] as string[],
         whitelistFollowers: false,
         whitelistFollowing: false,
     };

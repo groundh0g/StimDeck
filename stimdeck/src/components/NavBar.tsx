@@ -5,7 +5,7 @@ import "./NavBar.css";
 import {
     SetThemeFunction,
     SetColumnSizeFunction,
-    DoActionFunction, AppSettings,
+    DoActionFunction, AppSettings, ColumnSize, Theme,
 } from "./columns/Types";
 import {AppSettingsPopup} from "./AppSettingsPopup";
 
@@ -27,18 +27,18 @@ const emptyDoAction: DoActionFunction = (() => { /**/ });
 
 export class NavBar extends Component<NavBarProps, NavBarState> {
 
-    state: NavBarState = {
-        theme: "light",
-        columnSize: "small",
+    state = {
+        theme: "light" as Theme,
+        columnSize: "small" as ColumnSize,
         themeChanged: emptySetTheme,
         columnSizeChanged: emptySetColumnSize,
         reloadAllColumns: emptyDoAction,
         closeAllColumns: emptyDoAction,
         saveChanges: emptyDoAction,
-        blacklistKeywords: [],
+        blacklistKeywords: [] as string[],
         blacklistMaxHashtags: 9999,
         blacklistMaxMentions: 9999,
-        whitelistUsers: [],
+        whitelistUsers: [] as string[],
         whitelistFollowers: false,
         whitelistFollowing: false,
     };
