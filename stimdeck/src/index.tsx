@@ -4,17 +4,32 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import { Theme } from "./components/columns/Types";
-import {setColumnSize, setTheme} from './AppFunctions';
-import {SetColumnSizeFunction, SetThemeFunction} from "./components/columns/Types";
+import {DoActionFunction, SetColumnSizeFunction, SetThemeFunction} from "./components/columns/Types";
+
+const emptySetColumnSize: SetColumnSizeFunction = (() => { /**/ });
+const emptySetTheme: SetThemeFunction = (() => { /**/ });
+const emptyDoAction: DoActionFunction = (() => { /**/ });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App theme="light" columnSize="small"
-         setTheme={setTheme as SetThemeFunction}
-         setColumnSize={setColumnSize as SetColumnSizeFunction} />
+    <App theme={"light"}
+         columnSize={"small"}
+         themeChanged={emptySetTheme}
+         columnSizeChanged={emptySetColumnSize}
+         reloadAllColumns={emptyDoAction}
+         closeAllColumns={emptyDoAction}
+         blacklistKeywords={[]}
+         blacklistMaxHashtags={9999}
+         blacklistMaxMentions={9999}
+         whitelistUsers={[]}
+         whitelistFollowers={false}
+         whitelistFollowing={false}
+         saveChanges={emptyDoAction}
+    />
   </React.StrictMode>
 );
 

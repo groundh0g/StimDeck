@@ -9,33 +9,26 @@ import {
     ColumnSize,
     SetColumnSizeFunction,
     DoActionFunction,
-    SetWhitelistValuesFunction,
-    SetBlacklistValuesFunction
+    AppSettings
 } from "./columns/Types";
 import {ToggleButton} from "./ToggleButton";
 
 
-type AppSettingsPopupProps = {
-    theme: Theme;
-    columnSize: ColumnSize;
-    setTheme: SetThemeFunction; // | undefined;
-    setColumnSize: SetColumnSizeFunction; // | undefined;
-    reloadAllColumns: DoActionFunction;
-    closeAllColumns: DoActionFunction;
-    setBlacklistValues: SetBlacklistValuesFunction,
-    setWhitelistValues: SetWhitelistValuesFunction,
+type AppSettingsPopupProps = AppSettings & {
+    themeChanged: SetThemeFunction,
+    columnSizeChanged: SetColumnSizeFunction,
+    reloadAllColumns: DoActionFunction,
+    closeAllColumns: DoActionFunction,
+    saveChanges: DoActionFunction
 };
 
 type AppSettingsPopupState = AppSettingsPopupProps & {
     // add more attributes here ...
 };
 
-
 const emptySetColumnSize: SetColumnSizeFunction = (() => { /**/ });
 const emptySetTheme: SetThemeFunction = (() => { /**/ });
 const emptyDoAction: DoActionFunction = (() => { /**/ });
-const emptySetBlacklistValues: SetBlacklistValuesFunction = (() => { /**/ });
-const emptySetWhitelistValues: SetWhitelistValuesFunction = (() => { /**/ });
 
 type TooltipValues = {[key: string] : string};
 const tooltipValues : TooltipValues = {
@@ -49,25 +42,35 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
     state: AppSettingsPopupState = {
         theme: "light",
         columnSize: "small",
-        setTheme: emptySetTheme,
-        setColumnSize: emptySetColumnSize,
+        themeChanged: emptySetTheme,
+        columnSizeChanged: emptySetColumnSize,
         reloadAllColumns: emptyDoAction,
         closeAllColumns: emptyDoAction,
-        setBlacklistValues: emptySetBlacklistValues,
-        setWhitelistValues: emptySetWhitelistValues,
+        saveChanges: emptyDoAction,
+        blacklistKeywords: [],
+        blacklistMaxHashtags: 9999,
+        blacklistMaxMentions: 9999,
+        whitelistUsers: [],
+        whitelistFollowers: false,
+        whitelistFollowing: false,
     };
 
     constructor(props: AppSettingsPopupProps) {
         super(props);
 
-        this.state.theme = this.props.theme ?? "light";
-        this.state.columnSize = this.props.columnSize ?? "small";
-        this.state.setTheme = this.props.setTheme ?? emptySetTheme;
-        this.state.setColumnSize = this.props.setColumnSize ?? emptySetColumnSize;
-        this.state.reloadAllColumns = this.props.reloadAllColumns ?? emptyDoAction;
-        this.state.closeAllColumns = this.props.closeAllColumns ?? emptyDoAction;
-        this.state.setBlacklistValues = this.props.setBlacklistValues ?? emptySetBlacklistValues;
-        this.state.setWhitelistValues = this.props.setWhitelistValues ?? emptySetWhitelistValues;
+        this.state.theme = this.props.theme;
+        this.state.columnSize = this.props.columnSize;
+        this.state.themeChanged = this.props.themeChanged;
+        this.state.columnSizeChanged = this.props.columnSizeChanged;
+        this.state.reloadAllColumns = this.props.reloadAllColumns;
+        this.state.closeAllColumns = this.props.closeAllColumns;
+        this.state.saveChanges = this.props.saveChanges;
+        this.state.blacklistKeywords = this.props.blacklistKeywords;
+        this.state.blacklistMaxHashtags = this.props.blacklistMaxHashtags;
+        this.state.blacklistMaxMentions = this.props.blacklistMaxMentions;
+        this.state.whitelistUsers = this.props.whitelistUsers;
+        this.state.whitelistFollowers = this.props.whitelistFollowers;
+        this.state.whitelistFollowing = this.props.whitelistFollowing;
     }
 
     render() {
@@ -123,13 +126,13 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
                                 </td>
                             </tr>
                             <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Reload All</td>
+                                <td className="nav-settings-indent nav-settings-fill">Reload Columns</td>
                                 <td className="nav-settings-right">
                                     <div className="nav-settings-button">RELOAD ALL</div>
                                 </td>
                             </tr>
                             <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Close All</td>
+                                <td className="nav-settings-indent nav-settings-fill">Close Columns</td>
                                 <td className="nav-settings-right">
                                     <div className="nav-settings-button">CLOSE ALL</div>
                                 </td>

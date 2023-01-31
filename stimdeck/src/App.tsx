@@ -2,26 +2,46 @@ import React, {Component} from 'react';
 import './App.css';
 import { NavBar} from "./components/NavBar";
 import { Column } from "./components/columns/Column";
-import {ColumnSize, Theme, SetThemeFunction, SetColumnSizeFunction} from "./components/columns/Types";
+import {
+    ColumnSize,
+    Theme,
+    SetThemeFunction,
+    SetColumnSizeFunction,
+    DoActionFunction,
+    AppSettings
+} from "./components/columns/Types";
 
-type AppProps = {
-    columnSize: ColumnSize;
-    theme: Theme;
-    setTheme: SetThemeFunction; // | undefined;
-    setColumnSize: SetColumnSizeFunction; // | undefined;
+type AppProps = AppSettings & {
+    themeChanged: SetThemeFunction,
+    columnSizeChanged: SetColumnSizeFunction,
+    reloadAllColumns: DoActionFunction,
+    closeAllColumns: DoActionFunction,
+    saveChanges: DoActionFunction
 };
 
 type AppState = AppProps & {
     // add more attributes here ...
 };
 
+const emptySetColumnSize: SetColumnSizeFunction = (() => { /**/ });
+const emptySetTheme: SetThemeFunction = (() => { /**/ });
+const emptyDoAction: DoActionFunction = (() => { /**/ });
 
 export default class App extends Component<AppProps, AppState> {
     state: AppState = {
         theme: "light",
-        setTheme: ((self, event, theme) => { self.setState({theme: theme}) }) as SetThemeFunction,
         columnSize: "small",
-        setColumnSize: ((self, event, size) => { self.setState({columnSize: size}) }) as SetColumnSizeFunction,
+        themeChanged: emptySetTheme,
+        columnSizeChanged: emptySetColumnSize,
+        reloadAllColumns: emptyDoAction,
+        closeAllColumns: emptyDoAction,
+        saveChanges: emptyDoAction,
+        blacklistKeywords: [],
+        blacklistMaxHashtags: 9999,
+        blacklistMaxMentions: 9999,
+        whitelistUsers: [],
+        whitelistFollowers: false,
+        whitelistFollowing: false,
     };
 
     constructor(props: AppProps) {
@@ -29,8 +49,17 @@ export default class App extends Component<AppProps, AppState> {
 
         this.state.theme = this.props.theme;
         this.state.columnSize = this.props.columnSize;
-        // this.state.setTheme = this.props.setTheme;
-        // this.state.setColumnSize= this.props.setColumnSize;
+        this.state.themeChanged = this.props.themeChanged;
+        this.state.columnSizeChanged = this.props.columnSizeChanged;
+        this.state.reloadAllColumns = this.props.reloadAllColumns;
+        this.state.closeAllColumns = this.props.closeAllColumns;
+        this.state.saveChanges = this.props.saveChanges;
+        this.state.blacklistKeywords = this.props.blacklistKeywords;
+        this.state.blacklistMaxHashtags = this.props.blacklistMaxHashtags;
+        this.state.blacklistMaxMentions = this.props.blacklistMaxMentions;
+        this.state.whitelistUsers = this.props.whitelistUsers;
+        this.state.whitelistFollowers = this.props.whitelistFollowers;
+        this.state.whitelistFollowing = this.props.whitelistFollowing;
     }
 
     render() {
@@ -38,10 +67,20 @@ export default class App extends Component<AppProps, AppState> {
             <div className={`app app-${this.state.theme}`}>
                 <div className="app-header page-background">
                     <NavBar key={0}
-                            columnSize={this.props.columnSize}
-                            setColumnSize={this.props.setColumnSize}
-                            theme={this.state.theme}
-                            setTheme={this.props.setTheme} />
+                            theme={"light"}
+                            columnSize={"small"}
+                            themeChanged={emptySetTheme}
+                            columnSizeChanged={emptySetColumnSize}
+                            reloadAllColumns={emptyDoAction}
+                            closeAllColumns={emptyDoAction}
+                            blacklistKeywords={[]}
+                            blacklistMaxHashtags={9999}
+                            blacklistMaxMentions={9999}
+                            whitelistUsers={[]}
+                            whitelistFollowers={false}
+                            whitelistFollowing={false}
+                            saveChanges={emptyDoAction}
+                    />
                     <div className="">
                         <Column foo={3} key={3} />
                         <Column foo={4} key={4} />
