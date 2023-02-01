@@ -64,7 +64,7 @@ export default class App extends Component<AppProps, AppState> {
 
     render() {
         return (
-            <div className={`app app-${this.state.theme}`}>
+            <div className={`app`}>
                 <div className="app-header page-background">
                     <NavBar key={0}
                             theme={"light"}
@@ -81,7 +81,7 @@ export default class App extends Component<AppProps, AppState> {
                             whitelistFollowing={false}
                             saveChanges={emptyDoAction}
                     />
-                    <div className="">
+                    <div className="app-columns">
                         <Column foo={3} key={3} />
                         <Column foo={4} key={4} />
                         <Column foo={5} key={5} />

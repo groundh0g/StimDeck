@@ -121,9 +121,9 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
                                     <optgroup label="Select Size">
                                         <option value={"x-small"}>X-Small (250px)</option>
                                         <option value={"small"}>Small* (300px)</option>
-                                        <option value={"medium"}>Medium (400px)</option>
-                                        <option value={"large"}>Large (500px)</option>
-                                        <option value={"x-large"}>X-Large (600px)</option>
+                                        <option value={"medium"}>Medium (350px)</option>
+                                        <option value={"large"}>Large (400px)</option>
+                                        <option value={"x-large"}>X-Large (450px)</option>
                                     </optgroup>
                                 </select>
                             </td>

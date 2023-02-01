@@ -18,6 +18,10 @@
   color: black;
 }
 
+.app-columns {
+  text-align: left;
+}
+
 /* Themes for Columns */
 
 .app[data-theme="light"] .col-content-wrapper {
@@ -312,27 +316,27 @@
 }
 
 .app[data-col-size="medium"] .col-bar {
-  width: 390px;
+  width: 340px;
 }
 
 .app[data-col-size="medium"] .col-content {
-  width: 394px;
+  width: 344px;
 }
 
 .app[data-col-size="large"] .col-bar {
-  width: 490px;
+  width: 390px;
 }
 
 .app[data-col-size="large"] .col-content {
-  width: 494px;
+  width: 394px;
 }
 
 .app[data-col-size="x-large"] .col-bar {
-  width: 590px;
+  width: 440px;
 }
 
 .app[data-col-size="x-large"] .col-content {
-  width: 594px;
+  width: 444px;
 }
 
 .nav-settings-popup.hidden {
