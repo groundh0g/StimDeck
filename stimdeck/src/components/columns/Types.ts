@@ -69,8 +69,8 @@ export const typeToIconMap : TypedDictionary<string> = {
 export type Theme = "light" | "dark" | "red" | "blue" | "green" | "purple" | "yellow" | "orange";
 export type ColumnSize = "x-small" | "small" | "medium" | "large" | "x-large";
 
-export type SetThemeFunction = (app: React.Component, event: React.UIEvent, currentTheme: Theme, theme?: Theme) => void;
-export type SetColumnSizeFunction = (app: React.Component, event: React.UIEvent, colSize: ColumnSize) => void;
+export type SetThemeFunction = (app: React.Component, theme: Theme) => void;
+export type SetColumnSizeFunction = (app: React.Component, colSize: ColumnSize) => void;
 export type DoActionFunction = (app: React.Component, payload?: unknown) => void;
 
 export type AppSettings = {

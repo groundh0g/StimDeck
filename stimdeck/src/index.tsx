@@ -4,11 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import { Theme } from "./components/columns/Types";
-import {DoActionFunction, SetColumnSizeFunction, SetThemeFunction} from "./components/columns/Types";
+import {ColumnSize, DoActionFunction, Theme} from "./components/columns/Types";
 
-const emptySetColumnSize: SetColumnSizeFunction = (() => { /**/ });
-const emptySetTheme: SetThemeFunction = (() => { /**/ });
+// const emptySetColumnSize: SetColumnSizeFunction = (() => { /**/ });
+// const emptySetTheme: SetThemeFunction = (() => { /**/ });
 const emptyDoAction: DoActionFunction = (() => { /**/ });
+
+const onColumnSizeChanged = ((event, columnSize) : void => {
+    (document.querySelector(".app") as HTMLElement).dataset["colSize"] = columnSize as ColumnSize;
+}) as DoActionFunction;
+
+const onThemeChanged = ((event, theme) : void => {
+    (document.querySelector(".app") as HTMLElement).dataset["theme"] = theme as Theme;
+}) as DoActionFunction;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,8 +26,8 @@ root.render(
   <React.StrictMode>
     <App theme={"light"}
          columnSize={"small"}
-         themeChanged={emptySetTheme}
-         columnSizeChanged={emptySetColumnSize}
+         themeChanged={onThemeChanged}
+         columnSizeChanged={onColumnSizeChanged}
          reloadAllColumns={emptyDoAction}
          closeAllColumns={emptyDoAction}
          blacklistKeywords={[]}

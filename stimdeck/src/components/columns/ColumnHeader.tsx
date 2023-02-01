@@ -30,12 +30,6 @@ export class ColumnHeader extends Component<ColumnHeaderProps, ColumnHeaderState
                 <div className="col-button col-float-right"><i className="fas fa-solid fa-sliders"></i></div>
                 <div className="col-button col-float-left"><i className="fas fa-solid fa-rotate-right"></i></div>
                 <div className="col-title"><i className="fas fa-solid fa-user"></i>&nbsp;&nbsp;@groundh0g</div>
-
-                {/*<button className="colButton" onClick={(event) => { // @ts-ignore*/}
-                {/*    document.querySelector("html").dataset.theme = "light"; }}><i className="fa-solid fa-rotate"></i></button>*/}
-                {/*/!* eslint-disable-next-line @typescript-eslint/ban-ts-comment *!/*/}
-                {/*<button className="colButton" onClick={(event) => { // @ts-ignore*/}
-                {/*    document.querySelector("html").dataset.theme = "dark"; }}><i className="fa-solid fa-up-long"></i></button>*/}
             </div>
         );
     }

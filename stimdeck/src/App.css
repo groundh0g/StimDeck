@@ -18,51 +18,323 @@
   color: black;
 }
 
-.app[data-theme="dark"] .page-background {
-  background: url('background-dark.png') no-repeat center center;
-  background-color: gray;
-  color: lightgray;
-}
+/* Themes for Columns */
 
-.app[data-theme="light"] .page-background {
-  background: url('background-light.png') no-repeat center center;
+.app[data-theme="light"] .col-content-wrapper {
   background-color: white;
   color: black;
 }
 
-.app[data-theme="red"] .page-background {
-  background: url('background-red.png') no-repeat center center;
+.app[data-theme="dark"] .col-content-wrapper {
+  background-color: dimgray;
+  color: lightgray;
+}
+
+.app[data-theme="red"] .col-content {
   background-color: pink;
   color: maroon;
 }
 
-.app[data-theme="green"] .page-background {
-  background: url('background-green.png') no-repeat center center;
-  background-color: yellowgreen;
+.app[data-theme="green"] .col-content {
+  background-color: palegreen;
   color: darkgreen;
 }
 
-.app[data-theme="blue"] .page-background {
-  background: url('background-blue.png') no-repeat center center;
-  background-color: lightblue;
+.app[data-theme="blue"] .col-content {
+  background-color: lightsteelblue;
   color: navy;
 }
 
-.app[data-theme="yellow"] .page-background {
-  background: url('background-yellow.png') no-repeat center center;
-  background-color: palegoldenrod;
+.app[data-theme="yellow"] .col-content {
+  background-color: lightgoldenrodyellow;
   color: darkgoldenrod;
 }
 
-.app[data-theme="orange"] .page-background {
-  background: url('background-orange.png') no-repeat center center;
-  background-color: #FDE09B;
-  color: darkorange;
+.app[data-theme="orange"] .col-content {
+  background-color: #F29C50;
+  color: #D95204;
 }
 
-.app[data-theme="purple"] .page-background {
-  background: url('background-purple.png') no-repeat center center;
+.app[data-theme="purple"] .col-content {
   background-color: lavender;
   color: rebeccapurple;
 }
 
+/* Themes for Headers */
+
+.app[data-theme="light"] .col-header,
+.app[data-theme="light"] .nav-button,
+.app[data-theme="light"] .col-button,
+.app[data-theme="light"] .nav-bar,
+.app[data-theme="light"] .col-bar
+{
+  background-color: black;
+  color: white;
+}
+
+.app[data-theme="light"] .col-content
+{
+  border-color: black;
+  background-color: white;
+  color: black;
+}
+
+.app[data-theme="dark"] .col-header,
+.app[data-theme="dark"] .nav-button,
+.app[data-theme="dark"] .col-button,
+.app[data-theme="dark"] .nav-bar,
+.app[data-theme="dark"] .col-bar
+{
+  border-color: black;
+  background-color: black;
+  color: white;
+}
+
+.app[data-theme="dark"] .col-content
+{
+  border-color: black;
+  background-color: lightgray;
+  color: black;
+}
+
+.app[data-theme="red"] .col-header,
+.app[data-theme="red"] .nav-button,
+.app[data-theme="red"] .col-button,
+.app[data-theme="red"] .nav-bar,
+.app[data-theme="red"] .col-bar
+{
+  border-color: maroon;
+  background-color: maroon;
+  color: white;
+}
+
+.app[data-theme="red"] .col-content
+{
+  border-color: maroon;
+  background-color: #FFE7D7;
+  color: maroon;
+}
+
+.app[data-theme="blue"] .col-header,
+.app[data-theme="blue"] .nav-button,
+.app[data-theme="blue"] .col-button,
+.app[data-theme="blue"] .nav-bar,
+.app[data-theme="blue"] .col-bar
+{
+  border-color: navy;
+  background-color: navy;
+  color: white;
+}
+
+.app[data-theme="blue"] .col-content
+{
+  border-color: navy;
+  background-color: aliceblue;
+  color: navy;
+}
+
+.app[data-theme="green"] .col-header,
+.app[data-theme="green"] .nav-button,
+.app[data-theme="green"] .col-button,
+.app[data-theme="green"] .nav-bar,
+.app[data-theme="green"] .col-bar
+{
+  border-color: darkgreen;
+  background-color: darkgreen;
+  color: white;
+}
+
+.app[data-theme="green"] .col-content
+{
+  border-color: darkgreen;
+  background-color: #CFFFD5;
+  color: darkgreen;
+}
+
+.app[data-theme="yellow"] .col-header,
+.app[data-theme="yellow"] .nav-button,
+.app[data-theme="yellow"] .col-button,
+.app[data-theme="yellow"] .nav-bar,
+.app[data-theme="yellow"] .col-bar
+{
+  border-color: darkgoldenrod;
+  background-color: darkgoldenrod;
+  color: white;
+}
+
+.app[data-theme="yellow"] .col-content
+{
+  border-color: darkgoldenrod;
+  background-color: lightgoldenrodyellow;
+  color: darkgoldenrod;
+}
+
+.app[data-theme="orange"] .col-header,
+.app[data-theme="orange"] .nav-button,
+.app[data-theme="orange"] .col-button,
+.app[data-theme="orange"] .nav-bar,
+.app[data-theme="orange"] .col-bar
+{
+  border-color: #F29C50;
+  background-color: #D95204;
+  color: white;
+}
+
+.app[data-theme="orange"] .col-content
+{
+  border-color: #D95204;
+  background-color: #FFD7BA;
+  color: #D95204;
+
+}
+
+.app[data-theme="purple"] .col-header,
+.app[data-theme="purple"] .nav-button,
+.app[data-theme="purple"] .col-button,
+.app[data-theme="purple"] .nav-bar,
+.app[data-theme="purple"] .col-bar
+{
+  border-color: rebeccapurple;
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.app[data-theme="purple"] .col-content
+{
+  border-color: rebeccapurple;
+  background-color: lavender;
+  color: rebeccapurple;
+}
+
+/* Themes for AppSettingsPopup */
+
+.app[data-theme="dark"] .nav-settings-popup {
+  background-color: dimgray;
+  color: white;
+}
+
+.app[data-theme="dark"] .nav-settings-popup-heading {
+  background-color: black;
+  color: white;
+}
+
+
+.app[data-theme="dark"] .nav-settings-popup fieldset {
+  color: white;
+}
+
+.app[data-theme="light"] .nav-settings-popup {
+  background-color: lightgray;
+  color: black;
+}
+
+.app[data-theme="light"] .nav-settings-popup-heading {
+  background-color: black;
+  color: white;
+}
+
+.app[data-theme="red"] .nav-settings-popup {
+  background-color: #FFE7D7;
+  color: black;
+}
+
+.app[data-theme="red"] .nav-settings-popup-heading {
+  background-color: maroon;
+  color: white;
+}
+
+.app[data-theme="green"] .nav-settings-popup {
+  background-color: #CFFFD5;
+  color: darkgreen;
+}
+
+.app[data-theme="green"] .nav-settings-popup-heading {
+  background-color: darkgreen;
+  color: white;
+}
+
+.app[data-theme="blue"] .nav-settings-popup {
+  background-color: aliceblue;
+  color: navy;
+}
+
+.app[data-theme="blue"] .nav-settings-popup-heading {
+  background-color: navy;
+  color: white;
+}
+
+.app[data-theme="yellow"] .nav-settings-popup {
+  background-color: lightgoldenrodyellow;
+  color: darkgoldenrod;
+}
+
+.app[data-theme="yellow"] .nav-settings-popup-heading {
+  background-color: darkgoldenrod;
+  color: white;
+}
+
+.app[data-theme="orange"] .nav-settings-popup {
+  background-color: #FFD7BA;
+  color: #D95204;
+}
+
+.app[data-theme="orange"] .nav-settings-popup-heading {
+  background-color: #D95204;
+  color: white;
+}
+
+.app[data-theme="purple"] .nav-settings-popup {
+  background-color: lavender;
+  color: rebeccapurple;
+}
+
+.app[data-theme="purple"] .nav-settings-popup-heading {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+/* Column Sizes */
+
+.app[data-col-size="x-small"] .col-bar {
+  width: 240px;
+}
+
+.app[data-col-size="x-small"] .col-content {
+  width: 244px;
+}
+
+.app[data-col-size="small"] .col-bar {
+  width: 290px;
+}
+
+.app[data-col-size="small"] .col-content {
+  width: 294px;
+}
+
+.app[data-col-size="medium"] .col-bar {
+  width: 390px;
+}
+
+.app[data-col-size="medium"] .col-content {
+  width: 394px;
+}
+
+.app[data-col-size="large"] .col-bar {
+  width: 490px;
+}
+
+.app[data-col-size="large"] .col-content {
+  width: 494px;
+}
+
+.app[data-col-size="x-large"] .col-bar {
+  width: 590px;
+}
+
+.app[data-col-size="x-large"] .col-content {
+  width: 594px;
+}
+
+.nav-settings-popup.hidden {
+  display: none;
+}

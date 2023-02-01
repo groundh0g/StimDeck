@@ -3,8 +3,8 @@ import './App.css';
 import { NavBar} from "./components/NavBar";
 import { Column } from "./components/columns/Column";
 import {
-    ColumnSize,
-    Theme,
+    // ColumnSize,
+    // Theme,
     SetThemeFunction,
     SetColumnSizeFunction,
     DoActionFunction,
@@ -69,8 +69,8 @@ export default class App extends Component<AppProps, AppState> {
                     <NavBar key={0}
                             theme={"light"}
                             columnSize={"small"}
-                            themeChanged={emptySetTheme}
-                            columnSizeChanged={emptySetColumnSize}
+                            themeChanged={this.props.themeChanged}
+                            columnSizeChanged={this.props.columnSizeChanged}
                             reloadAllColumns={emptyDoAction}
                             closeAllColumns={emptyDoAction}
                             blacklistKeywords={[]}

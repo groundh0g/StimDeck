@@ -19,7 +19,8 @@
 { float: right; }
 
 .nav-button {
-    background-color: black;
+    /*background-color: black;*/
+    background-color: transparent;
     border-radius: 7px;
     position: relative;
     margin: 0;

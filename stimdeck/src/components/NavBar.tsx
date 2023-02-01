@@ -65,18 +65,19 @@ export class NavBar extends Component<NavBarProps, NavBarState> {
         return (
             <div className="nav-bar">
                 <div className="nav-button nav-float-right"
-                     onClick={(event) =>
-                         this.props.columnSizeChanged(this, event, this.state.columnSize) } ><i className="fas fa-solid fa-sliders"> </i></div>
+                     onClick={(event) => {
+                         (document.querySelector(".nav-settings-popup") as HTMLElement).classList.toggle("hidden");
+                     }} ><i className="fas fa-solid fa-sliders"> </i></div>
                 <div className="nav-button nav-float-left"
                      onClick={(event) =>
-                         this.props.themeChanged(this, event, this.state.theme) }><i className="fas fa-solid fa-plus"> </i></div>
+                         this.props.themeChanged(this, this.state.theme) }><i className="fas fa-solid fa-plus"> </i></div>
                 <div className="nav-title">StimDeck - a HUD for Stimulus.com</div>
 
                 <AppSettingsPopup
                     theme={"light"}
                     columnSize={"small"}
-                    themeChanged={emptySetTheme}
-                    columnSizeChanged={emptySetColumnSize}
+                    themeChanged={this.props.themeChanged}
+                    columnSizeChanged={this.props.columnSizeChanged}
                     reloadAllColumns={emptyDoAction}
                     closeAllColumns={emptyDoAction}
                     blacklistKeywords={[]}

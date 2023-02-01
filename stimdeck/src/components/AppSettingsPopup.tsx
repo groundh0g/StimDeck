@@ -74,133 +74,135 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
     }
 
     render() {
-        return (
-            <div className="nav-settings-popup hidden">
-                <div className="nav-settings-popup-heading">Application Settings <span className="nav-settings-close-button"><i
-                    className="fa-solid fa-rectangle-xmark"> </i></span></div>
+        return <div className="nav-settings-popup ">
+            <div className="nav-settings-popup-heading">Application Settings <span className="nav-settings-close-button" onClick={(event) => {
+                (document.querySelector(".nav-settings-popup") as HTMLElement).classList.toggle("hidden");
+            }}><i
+                className="fa-solid fa-rectangle-xmark"> </i></span></div>
 
-                <div className="nav-settings-instructions">Scroll down to see all options,<br/>and to save your changes.</div>
+            <div className="nav-settings-instructions">Scroll down to see all options,<br/>and to save your changes.</div>
 
-                <fieldset>
-                    <legend>General&nbsp;&nbsp;<span className="nav-settings-button-info-xxx" title={tooltipValues["general"]}><i className="fa-regular fa-circle-question">&nbsp;</i></span></legend>
-                    <table>
-                        <tbody>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Theme</td>
-                                <td className="nav-settings-right">
-                                    <select name="theme" id="theme-select" defaultValue={this.props.theme} onChange={(event) => {
-                                        const newValue = event.currentTarget.value as Theme;
-                                        this.setState({theme: newValue});
-                                        event.preventDefault();
-                                    }}>
-                                        <optgroup label="Select Theme">
-                                            <option value="light">Light*</option>
-                                            <option value="dark">Dark</option>
-                                            <option disabled>───────</option>
-                                            <option value="red">Red</option>
-                                            <option value="green">Green</option>
-                                            <option value="blue">Blue</option>
-                                            <option value="yellow">Yellow</option>
-                                            <option value="orange">Orange</option>
-                                            <option value="purple">Purple</option>
-                                        </optgroup>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Column Width</td>
-                                <td className="nav-settings-right">
-                                    <select name="column-size" id="column-size-select" defaultValue={this.state.columnSize.toString()} onChange={(event) => {
-                                        const newValue = event.currentTarget.value as ColumnSize;
-                                        this.setState({columnSize: newValue});
-                                        event.preventDefault();
-                                    }}>
-                                        <optgroup label="Select Size">
-                                            <option value={"x-small"}>X-Small (250px)</option>
-                                            <option value={"small"}>Small* (300px)</option>
-                                            <option value={"medium"}>Medium (400px)</option>
-                                            <option value={"large"}>Large (500px)</option>
-                                            <option value={"x-large"}>X-Large (600px)</option>
-                                        </optgroup>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Reload Columns</td>
-                                <td className="nav-settings-right">
-                                    <div className="nav-settings-button">RELOAD ALL</div>
-                                </td>
-                            </tr>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Close Columns</td>
-                                <td className="nav-settings-right">
-                                    <div className="nav-settings-button">CLOSE ALL</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </fieldset>
+            <fieldset>
+                <legend>General&nbsp;&nbsp;<span className="" title={tooltipValues["general"]}><i className="fa-regular fa-circle-question">&nbsp;</i></span></legend>
+                <table>
+                    <tbody>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Theme</td>
+                            <td className="nav-settings-right">
+                                <select name="theme" id="theme-select" defaultValue={this.props.theme} onChange={(event) => {
+                                    const newValue = event.currentTarget.value as Theme;
+                                    this.setState({theme: newValue});
+                                    this.props.themeChanged(this, newValue);
+                                    event.preventDefault();
+                                }}>
+                                    <optgroup label="Select Theme">
+                                        <option value="light">Light*</option>
+                                        <option value="dark">Dark</option>
+                                        <option disabled>───────</option>
+                                        <option value="red">Red</option>
+                                        <option value="green">Green</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="yellow">Yellow</option>
+                                        <option value="orange">Orange</option>
+                                        <option value="purple">Purple</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Column Width</td>
+                            <td className="nav-settings-right">
+                                <select name="column-size" id="column-size-select" defaultValue={this.state.columnSize} onChange={(event) => {
+                                    const newValue = event.currentTarget.value as ColumnSize;
+                                    this.setState({columnSize: newValue});
+                                    this.props.columnSizeChanged(this, newValue);
+                                    event.preventDefault();
+                                }}>
+                                    <optgroup label="Select Size">
+                                        <option value={"x-small"}>X-Small (250px)</option>
+                                        <option value={"small"}>Small* (300px)</option>
+                                        <option value={"medium"}>Medium (400px)</option>
+                                        <option value={"large"}>Large (500px)</option>
+                                        <option value={"x-large"}>X-Large (600px)</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Reload Columns</td>
+                            <td className="nav-settings-right">
+                                <div className="nav-settings-button">RELOAD ALL</div>
+                            </td>
+                        </tr>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Close Columns</td>
+                            <td className="nav-settings-right">
+                                <div className="nav-settings-button">CLOSE ALL</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
 
-                <fieldset>
-                    <legend>Blacklist&nbsp;&nbsp;<span className="nav-settings-button-info-xxx" title={tooltipValues["blacklist"]}><i className="fa-regular fa-circle-question">&nbsp;</i></span></legend>
-                    <table>
-                        <tbody>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Keywords</td>
-                                <td className="nav-settings-right">
-                                    <div className="nav-settings-button">EDIT LIST</div>
-                                </td>
-                            </tr>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Max Hashtags</td>
-                                <td className="nav-settings-right">
-                                    {/*<div className="nav-settings-button">SELECT</div>*/}
-                                    <input id="nav-settings-textbox-max-hashtags" placeholder="9999"/>
-                                </td>
-                            </tr>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Max Mentions</td>
-                                <td className="nav-settings-right">
-                                    {/*<div className="nav-settings-button">SELECT</div>*/}
-                                    <input id="nav-settings-textbox-max-mentions" placeholder="9999"/>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </fieldset>
+            <fieldset>
+                <legend>Blacklist&nbsp;&nbsp;<span className="" title={tooltipValues["blacklist"]}><i className="fa-regular fa-circle-question">&nbsp;</i></span></legend>
+                <table>
+                    <tbody>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Keywords</td>
+                            <td className="nav-settings-right">
+                                <div className="nav-settings-button">EDIT LIST</div>
+                            </td>
+                        </tr>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Max Hashtags</td>
+                            <td className="nav-settings-right">
+                                {/*<div className="nav-settings-button">SELECT</div>*/}
+                                <input id="nav-settings-textbox-max-hashtags" placeholder="9999"/>
+                            </td>
+                        </tr>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Max Mentions</td>
+                            <td className="nav-settings-right">
+                                {/*<div className="nav-settings-button">SELECT</div>*/}
+                                <input id="nav-settings-textbox-max-mentions" placeholder="9999"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
 
-                <fieldset>
-                    <legend>Whitelist&nbsp;&nbsp;<span className="nav-settings-button-info-xxx" title={tooltipValues["whitelist"]}><i className="fa-regular fa-circle-question">&nbsp;</i></span></legend>
-                    <table>
-                        <tbody>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Users</td>
-                                <td className="nav-settings-right">
-                                    <div className="nav-settings-button">EDIT LIST</div>
-                                </td>
-                            </tr>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Followers</td>
-                                <td className="nav-settings-right">
-                                    <ToggleButton isSet={false} isDisabled={false} />
-                                    {/*<div className="nav-settings-button">SELECT</div>*/}
-                                </td>
-                            </tr>
-                            <tr className="nav-settings-row">
-                                <td className="nav-settings-indent nav-settings-fill">Following</td>
-                                <td className="nav-settings-right">
-                                    <ToggleButton isSet={false} isDisabled={false} />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </fieldset>
-                <div className="nav-settings-button-row-xxx nav-settings-button-bottom-row">
-                    <div className="nav-settings-button nav-float-right green-button">SAVE</div>
-                    <div className="nav-settings-button nav-float-right gray-button">CANCEL</div>
-                    <div className="nav-settings-button-info-xxx nav-settings-button blue-button nav-float-clear">HELP</div>
-                </div>
+            <fieldset>
+                <legend>Whitelist&nbsp;&nbsp;<span className="" title={tooltipValues["whitelist"]}><i className="fa-regular fa-circle-question">&nbsp;</i></span></legend>
+                <table>
+                    <tbody>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Users</td>
+                            <td className="nav-settings-right">
+                                <div className="nav-settings-button">EDIT LIST</div>
+                            </td>
+                        </tr>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Followers</td>
+                            <td className="nav-settings-right">
+                                <ToggleButton isSet={false} isDisabled={false} />
+                                {/*<div className="nav-settings-button">SELECT</div>*/}
+                            </td>
+                        </tr>
+                        <tr className="nav-settings-row">
+                            <td className="nav-settings-indent nav-settings-fill">Following</td>
+                            <td className="nav-settings-right">
+                                <ToggleButton isSet={false} isDisabled={false} />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <div className="nav-settings-button-bottom-row">
+                <div className="nav-settings-button nav-float-right green-button">SAVE</div>
+                <div className="nav-settings-button nav-float-right gray-button">CANCEL</div>
+                <div className="nav-settings-button blue-button nav-float-clear">HELP</div>
             </div>
-        );
+        </div>;
     }
 }
