@@ -1,0 +1,251 @@
+.col-settings-popup {
+    width: 330px;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: lightgray;
+    color: black;
+    text-align: left;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 200;
+
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.col-settings-popup fieldset {
+    color: black;
+}
+
+.col-settings-popup table,
+.col-settings-popup tr,
+.col-settings-popup td
+{
+    padding: 0;
+    margin: 0;
+    /*border: 1px solid black;*/
+    border: none;
+}
+
+.col-settings-popup-heading {
+    height: 30px;
+    line-height: 30px;
+    background-color: gray;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.col-settings-row td.nav-settings-right {
+    text-align: right;
+}
+
+.col-settings-right {
+    min-width: 100px;
+}
+
+.col-settings-right select {
+    width: 100%
+}
+
+.col-settings-fill {
+    width: 100%;
+}
+
+.col-settings-button-row {
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    padding-top: 15px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.col-settings-button-row-filler {
+    height: 40px;
+    line-height: 40px;
+}
+
+/*nav-settings-button-row {*/
+
+/*}*/
+
+/*.theme-select {*/
+/*    !*height: 34px;*!*/
+/*    !*line-height: 34px;*!*/
+/*}*/
+
+.col-settings-row input {
+    /*font-size: 1.1em;*/
+    padding: 4px 2px;
+    text-align: right;
+    width: 110px;
+}
+
+.col-settings-row select {
+    /*font-size: 1.1em;*/
+    padding: 4px 2px;
+}
+
+.col-settings-row option {
+    font-size: 1.1em;
+}
+
+.col-settings-button {
+    background-color: cornflowerblue;
+    width: 120px;
+}
+
+.col-settings-button-bottom-row, /*.nav-settings-button-row,*/ .nav-settings-button {
+    /*background-color: cornflowerblue;*/
+    color: white;
+    padding: 0;
+    border-radius: 10px;
+    text-align: center;
+
+    height: 34px;
+    line-height: 34px;
+
+    /*width: 100px;*/
+    /*float: right;*/
+    /*margin-left: 5px;*/
+
+    /*cursor: pointer;*/
+}
+
+.col-settings-button-bottom-row .nav-settings-button {
+    /*float: right;*/
+    /*margin-top: 10px;*/
+    cursor: pointer;
+    width: 90px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.col-settings-instructions {
+    padding-top: 7px;
+    font-size: 0.9em;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 0.8em;
+    text-align: center;
+}
+
+.col-settings-button.yellow-button {
+    background-color: #F9D978;
+    border: 1px solid black;
+    color: black;
+}
+
+.col-settings-button.green-button {
+    background-color: #9DC284;
+    border: 1px solid black;
+    color: white;
+}
+
+.col-settings-button.blue-button {
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    color: white;
+}
+
+.col-settings-button.gray-button {
+    background-color: darkgray;
+    border: 1px solid black;
+    color: white;
+}
+
+
+.col-settings-button.red-button {
+    background-color: #D16D6A;
+    border: 1px solid black;
+    color: black;
+}
+
+/*.col-settings-button-bottom-row {*/
+/*    background-color: cornflowerblue;*/
+/*    color: white;*/
+/*    padding: 0;*/
+/*    border-radius: 10px;*/
+/*    text-align: center;*/
+
+/*    height: 34px;*/
+/*    line-height: 34px;*/
+
+/*    float: right;*/
+/*    width: 100px;*/
+/*}*/
+
+/*.col-settings-button-bottom-row {*/
+/*    background-color: cornflowerblue;*/
+/*    color: white;*/
+/*    padding: 0;*/
+/*    border-radius: 10px;*/
+/*    text-align: center;*/
+
+/*    height: 34px;*/
+/*    line-height: 34px;*/
+
+/*    float: right;*/
+/*    width: 40%;*/
+/*}*/
+
+
+.col-button {
+    background-color: black;
+    border-radius: 7px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.col-settings-button-info {
+    background-color: transparent;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+
+    height: 34px;
+    line-height: 34px;
+
+    display: inline-block;
+    cursor: pointer;
+
+    width: 30%;
+    /*clear-after: both;*/
+}
+
+.col-settings-right {
+    /*content-align: right;*/
+}
+
+.col-float-right {
+    float: right;
+}
+
+.col-float-clear {
+    clear-after: both;
+}
+
+.col-settings-button-bottom-row {
+    padding-top: 10px;
+}
+
+.col-settings-close-button {
+    color: white;
+    margin-right: 10px;
+    float: right;
+    clear-after: both;
+    cursor: pointer;
+}

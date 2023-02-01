@@ -212,90 +212,90 @@
 
 /* Themes for AppSettingsPopup */
 
-.app[data-theme="dark"] .nav-settings-popup {
-  background-color: dimgray;
-  color: white;
-}
+/*.app[data-theme="dark"] .nav-settings-popup {*/
+/*  background-color: darkgray;*/
+/*  color: black;*/
+/*}*/
 
-.app[data-theme="dark"] .nav-settings-popup-heading {
-  background-color: black;
-  color: white;
-}
+/*.app[data-theme="dark"] .nav-settings-popup-heading {*/
+/*  background-color: black;*/
+/*  color: white;*/
+/*}*/
 
 
-.app[data-theme="dark"] .nav-settings-popup fieldset {
-  color: white;
-}
+/*.app[data-theme="dark"] .nav-settings-popup fieldset {*/
+/*  color: black;*/
+/*}*/
 
-.app[data-theme="light"] .nav-settings-popup {
-  background-color: lightgray;
-  color: black;
-}
+/*.app[data-theme="light"] .nav-settings-popup {*/
+/*  background-color: lightgray;*/
+/*  color: black;*/
+/*}*/
 
-.app[data-theme="light"] .nav-settings-popup-heading {
-  background-color: black;
-  color: white;
-}
+/*.app[data-theme="light"] .nav-settings-popup-heading {*/
+/*  background-color: black;*/
+/*  color: white;*/
+/*}*/
 
-.app[data-theme="red"] .nav-settings-popup {
-  background-color: #FFE7D7;
-  color: black;
-}
+/*.app[data-theme="red"] .nav-settings-popup {*/
+/*  background-color: #FFE7D7;*/
+/*  color: black;*/
+/*}*/
 
-.app[data-theme="red"] .nav-settings-popup-heading {
-  background-color: maroon;
-  color: white;
-}
+/*.app[data-theme="red"] .nav-settings-popup-heading {*/
+/*  background-color: maroon;*/
+/*  color: white;*/
+/*}*/
 
-.app[data-theme="green"] .nav-settings-popup {
-  background-color: #CFFFD5;
-  color: darkgreen;
-}
+/*.app[data-theme="green"] .nav-settings-popup {*/
+/*  background-color: #CFFFD5;*/
+/*  color: darkgreen;*/
+/*}*/
 
-.app[data-theme="green"] .nav-settings-popup-heading {
-  background-color: darkgreen;
-  color: white;
-}
+/*.app[data-theme="green"] .nav-settings-popup-heading {*/
+/*  background-color: darkgreen;*/
+/*  color: white;*/
+/*}*/
 
-.app[data-theme="blue"] .nav-settings-popup {
-  background-color: aliceblue;
-  color: navy;
-}
+/*.app[data-theme="blue"] .nav-settings-popup {*/
+/*  background-color: aliceblue;*/
+/*  color: navy;*/
+/*}*/
 
-.app[data-theme="blue"] .nav-settings-popup-heading {
-  background-color: navy;
-  color: white;
-}
+/*.app[data-theme="blue"] .nav-settings-popup-heading {*/
+/*  background-color: navy;*/
+/*  color: white;*/
+/*}*/
 
-.app[data-theme="yellow"] .nav-settings-popup {
-  background-color: lightgoldenrodyellow;
-  color: darkgoldenrod;
-}
+/*.app[data-theme="yellow"] .nav-settings-popup {*/
+/*  background-color: lightgoldenrodyellow;*/
+/*  color: darkgoldenrod;*/
+/*}*/
 
-.app[data-theme="yellow"] .nav-settings-popup-heading {
-  background-color: darkgoldenrod;
-  color: white;
-}
+/*.app[data-theme="yellow"] .nav-settings-popup-heading {*/
+/*  background-color: darkgoldenrod;*/
+/*  color: white;*/
+/*}*/
 
-.app[data-theme="orange"] .nav-settings-popup {
-  background-color: #FFD7BA;
-  color: #D95204;
-}
+/*.app[data-theme="orange"] .nav-settings-popup {*/
+/*  background-color: #FFD7BA;*/
+/*  color: #D95204;*/
+/*}*/
 
-.app[data-theme="orange"] .nav-settings-popup-heading {
-  background-color: #D95204;
-  color: white;
-}
+/*.app[data-theme="orange"] .nav-settings-popup-heading {*/
+/*  background-color: #D95204;*/
+/*  color: white;*/
+/*}*/
 
-.app[data-theme="purple"] .nav-settings-popup {
-  background-color: lavender;
-  color: rebeccapurple;
-}
+/*.app[data-theme="purple"] .nav-settings-popup {*/
+/*  background-color: lavender;*/
+/*  color: rebeccapurple;*/
+/*}*/
 
-.app[data-theme="purple"] .nav-settings-popup-heading {
-  background-color: rebeccapurple;
-  color: white;
-}
+/*.app[data-theme="purple"] .nav-settings-popup-heading {*/
+/*  background-color: rebeccapurple;*/
+/*  color: white;*/
+/*}*/
 
 /* Column Sizes */
 
@@ -340,5 +340,9 @@
 }
 
 .nav-settings-popup.hidden {
+  display: none;
+}
+
+.col-settings-popup.hidden {
   display: none;
 }

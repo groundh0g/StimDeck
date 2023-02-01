@@ -8,6 +8,7 @@ import {
     DoActionFunction, AppSettings, ColumnSize, Theme,
 } from "./columns/Types";
 import {AppSettingsPopup} from "./AppSettingsPopup";
+import {ColumnSettingsPopup} from "./ColumnSettingsPopup";
 
 type NavBarProps = AppSettings & {
     themeChanged: SetThemeFunction,
@@ -67,10 +68,12 @@ export class NavBar extends Component<NavBarProps, NavBarState> {
                 <div className="nav-button nav-float-right"
                      onClick={(event) => {
                          (document.querySelector(".nav-settings-popup") as HTMLElement).classList.toggle("hidden");
-                     }} ><i className="fas fa-solid fa-sliders"> </i></div>
+                     }}><i className="fas fa-solid fa-sliders"> </i></div>
                 <div className="nav-button nav-float-left"
-                     onClick={(event) =>
-                         this.props.themeChanged(this, this.state.theme) }><i className="fas fa-solid fa-plus"> </i></div>
+                     onClick={(event) => {
+                         console.log("this is a test");
+                         (document.querySelector("#col-popup-add") as HTMLElement).classList.toggle("hidden");
+                     }}><i className="fas fa-solid fa-plus"> </i></div>
                 <div className="nav-title">StimDeck - a HUD for Stimulus.com</div>
 
                 <AppSettingsPopup
@@ -88,6 +91,8 @@ export class NavBar extends Component<NavBarProps, NavBarState> {
                     whitelistFollowing={false}
                     saveChanges={emptyDoAction}
                 />
+
+                <ColumnSettingsPopup popupId="col-popup-add" />
 
                 {/*<button className="colButton" onClick={(event) => { // @ts-ignore*/}
                 {/*    document.querySelector("html").dataset.theme = "light"; }}><i className="fa-solid fa-rotate"></i></button>*/}

@@ -33,7 +33,7 @@ export class ToggleButton extends Component<ToggleButtonProps, ToggleButtonState
 
     render() {
         return (
-            <div style={{textAlign: "center"}}>
+            <div className="toggle-button">
                 <Toggle
                     defaultChecked={this.state.isSet}
                     disabled={this.state.isDisabled}

@@ -74,7 +74,7 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
     }
 
     render() {
-        return <div className="nav-settings-popup ">
+        return <div className="nav-settings-popup hidden">
             <div className="nav-settings-popup-heading">Application Settings <span className="nav-settings-close-button" onClick={(event) => {
                 (document.querySelector(".nav-settings-popup") as HTMLElement).classList.toggle("hidden");
             }}><i
