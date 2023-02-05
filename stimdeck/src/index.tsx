@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import { Theme } from "./components/columns/Types";
 import {ColumnSize, DoActionFunction, Theme} from "./components/columns/Types";
+// import {AppSettingsPopup} from "./components/AppSettingsPopup";
 
 // const emptySetColumnSize: SetColumnSizeFunction = (() => { /**/ });
 // const emptySetTheme: SetThemeFunction = (() => { /**/ });
@@ -17,6 +18,16 @@ const onColumnSizeChanged = ((event, columnSize) : void => {
 const onThemeChanged = ((event, theme) : void => {
     (document.querySelector(".app") as HTMLElement).dataset["theme"] = theme as Theme;
 }) as DoActionFunction;
+
+// const doShowAppPopup = ((event, payload) : void => {
+//     const state = payload as {state: AppSettingsPopupState, setState: () => void};
+//     state.setState({state.state.show: !state.state.show});
+//     (document.querySelector("#app-seettings-popup") as HTMLElement).classList.toggle("hidden");
+// }) as DoActionFunction;
+//
+// const doShowColumnPopup = ((event) : void => {
+//     (document.querySelector("#app-seettings-popup") as HTMLElement).classList.toggle("hidden");
+// }) as DoActionFunction;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

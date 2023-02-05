@@ -7,18 +7,18 @@ import {
     SetColumnSizeFunction,
     DoActionFunction, AppSettings, ColumnSize, Theme,
 } from "./columns/Types";
-import {AppSettingsPopup} from "./AppSettingsPopup";
-import {ColumnSettingsPopup} from "./ColumnSettingsPopup";
 
 type NavBarProps = AppSettings & {
     themeChanged: SetThemeFunction,
     columnSizeChanged: SetColumnSizeFunction,
     reloadAllColumns: DoActionFunction,
-    closeAllColumns: DoActionFunction,
-    saveChanges: DoActionFunction
+    toggleSettingsPopup: DoActionFunction,
+    toggleAddColumnPopup: DoActionFunction,
 };
 
 type NavBarState = NavBarProps & {
+    // addColumnSettings: ColumnSettings,
+    // editColumnSettings: ColumnSettings,
     // add more attributes here ...
 };
 
@@ -34,14 +34,14 @@ export class NavBar extends Component<NavBarProps, NavBarState> {
         themeChanged: emptySetTheme,
         columnSizeChanged: emptySetColumnSize,
         reloadAllColumns: emptyDoAction,
-        closeAllColumns: emptyDoAction,
-        saveChanges: emptyDoAction,
         blacklistKeywords: [] as string[],
         blacklistMaxHashtags: 9999,
         blacklistMaxMentions: 9999,
         whitelistUsers: [] as string[],
         whitelistFollowers: false,
         whitelistFollowing: false,
+        toggleSettingsPopup: emptyDoAction,
+        toggleAddColumnPopup: emptyDoAction,
     };
 
     constructor(props: NavBarProps) {
@@ -52,14 +52,14 @@ export class NavBar extends Component<NavBarProps, NavBarState> {
         this.state.themeChanged = this.props.themeChanged;
         this.state.columnSizeChanged = this.props.columnSizeChanged;
         this.state.reloadAllColumns = this.props.reloadAllColumns;
-        this.state.closeAllColumns = this.props.closeAllColumns;
-        this.state.saveChanges = this.props.saveChanges;
         this.state.blacklistKeywords = this.props.blacklistKeywords;
         this.state.blacklistMaxHashtags = this.props.blacklistMaxHashtags;
         this.state.blacklistMaxMentions = this.props.blacklistMaxMentions;
         this.state.whitelistUsers = this.props.whitelistUsers;
         this.state.whitelistFollowers = this.props.whitelistFollowers;
         this.state.whitelistFollowing = this.props.whitelistFollowing;
+        // this.state.addColumnSettings = Object.assign({}, ColumnSettingsDefault);
+        // this.state.editColumnSettings = Object.assign({}, ColumnSettingsDefault);
     }
 
     render() {
@@ -67,38 +67,15 @@ export class NavBar extends Component<NavBarProps, NavBarState> {
             <div className="nav-bar">
                 <div className="nav-button nav-float-right"
                      onClick={(event) => {
-                         (document.querySelector(".nav-settings-popup") as HTMLElement).classList.toggle("hidden");
+                         this.props.toggleSettingsPopup(this);
+                         // (document.querySelector(".nav-settings-popup") as HTMLElement).classList.toggle("hidden");
                      }}><i className="fas fa-solid fa-sliders"> </i></div>
                 <div className="nav-button nav-float-left"
                      onClick={(event) => {
-                         console.log("this is a test");
-                         (document.querySelector("#col-popup-add") as HTMLElement).classList.toggle("hidden");
+                         this.props.toggleAddColumnPopup(this);
+                         // (document.querySelector("#col-popup-add") as HTMLElement).classList.toggle("hidden");
                      }}><i className="fas fa-solid fa-plus"> </i></div>
                 <div className="nav-title">StimDeck - a HUD for Stimulus.com</div>
-
-                <AppSettingsPopup
-                    theme={"light"}
-                    columnSize={"small"}
-                    themeChanged={this.props.themeChanged}
-                    columnSizeChanged={this.props.columnSizeChanged}
-                    reloadAllColumns={emptyDoAction}
-                    closeAllColumns={emptyDoAction}
-                    blacklistKeywords={[]}
-                    blacklistMaxHashtags={9999}
-                    blacklistMaxMentions={9999}
-                    whitelistUsers={[]}
-                    whitelistFollowers={false}
-                    whitelistFollowing={false}
-                    saveChanges={emptyDoAction}
-                />
-
-                <ColumnSettingsPopup popupId="col-popup-add" />
-
-                {/*<button className="colButton" onClick={(event) => { // @ts-ignore*/}
-                {/*    document.querySelector("html").dataset.theme = "light"; }}><i className="fa-solid fa-rotate"></i></button>*/}
-                {/*/!* eslint-disable-next-line @typescript-eslint/ban-ts-comment *!/*/}
-                {/*<button className="colButton" onClick={(event) => { // @ts-ignore*/}
-                {/*    document.querySelector("html").dataset.theme = "dark"; }}><i className="fa-solid fa-up-long"></i></button>*/}
             </div>
         );
     }

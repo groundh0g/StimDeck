@@ -33,7 +33,7 @@
 .nav-settings-popup-heading {
     height: 30px;
     line-height: 30px;
-    background-color: gray;
+    background-color: black;
     color: white;
     font-weight: bolder;
     text-align: center;
@@ -98,7 +98,10 @@
 
 .nav-settings-button {
     background-color: cornflowerblue;
+    border: 1px solid black;
     width: 120px;
+
+    font-weight: bolder;
 }
 
 .nav-settings-button-bottom-row, /*.nav-settings-button-row,*/ .nav-settings-button {
@@ -108,14 +111,17 @@
     border-radius: 10px;
     text-align: center;
 
-    height: 34px;
-    line-height: 34px;
+    height: 27px;
+    line-height: 27px;
 
     /*width: 100px;*/
     /*float: right;*/
     /*margin-left: 5px;*/
 
     /*cursor: pointer;*/
+}
+.nav-settings-button {
+    cursor: pointer;
 }
 
 .nav-settings-button-bottom-row .nav-settings-button {
@@ -128,7 +134,7 @@
 }
 
 .nav-settings-instructions {
-    padding-top: 7px;
+    padding: 7px 0;
     font-size: 0.9em;
     font-weight: normal;
     font-style: italic;

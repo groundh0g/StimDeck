@@ -34,8 +34,6 @@
 { float: right; }
 
 
-
-
 /*.col-header {*/
 /*    height: 26px;*/
 /*    line-height: 26px;*/
@@ -69,3 +67,6 @@
     text-align: center;
 }
 
+.col-active {
+    background-color: cornflowerblue;
+}

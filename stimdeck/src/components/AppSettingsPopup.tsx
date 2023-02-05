@@ -16,13 +16,15 @@ import {ToggleButton} from "./ToggleButton";
 
 type AppSettingsPopupProps = AppSettings & {
     themeChanged: SetThemeFunction,
-    columnSizeChanged: SetColumnSizeFunction,
-    reloadAllColumns: DoActionFunction,
-    closeAllColumns: DoActionFunction,
-    saveChanges: DoActionFunction
+    columnSizeChanged: SetColumnSizeFunction;
+    reloadAllColumns: DoActionFunction;
+    closeAllColumns: DoActionFunction;
+    saveChanges: DoActionFunction;
+    closeDialog: DoActionFunction;
+    show: boolean;
 };
 
-type AppSettingsPopupState = AppSettingsPopupProps & {
+export type AppSettingsPopupState = AppSettingsPopupProps & {
     // add more attributes here ...
 };
 
@@ -33,7 +35,7 @@ const emptyDoAction: DoActionFunction = (() => { /**/ });
 type TooltipValues = {[key: string] : string};
 const tooltipValues : TooltipValues = {
     "general": "In this section, you can select a theme, resize the columns, force the columns to refresh, close all columns.",
-    "blacklist": "Here, you can enter keywords to hide posts with that text, hide posts with too many hashtags, and hide posts with too many mentions.",
+    "blacklist": "Here, you can enter keywords to hide posts with that specific text, hide posts with too many hashtags, and hide posts with too many mentions.",
     "whitelist": "Here, you can ignore blacklist entries for the specified people, your followers, and/or those that you follow.",
 };
 
@@ -47,12 +49,14 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
         reloadAllColumns: emptyDoAction,
         closeAllColumns: emptyDoAction,
         saveChanges: emptyDoAction,
+        closeDialog: emptyDoAction,
         blacklistKeywords: [] as string[],
         blacklistMaxHashtags: 9999,
         blacklistMaxMentions: 9999,
         whitelistUsers: [] as string[],
         whitelistFollowers: false,
         whitelistFollowing: false,
+        show: false,
     };
 
     constructor(props: AppSettingsPopupProps) {
@@ -65,26 +69,29 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
         this.state.reloadAllColumns = this.props.reloadAllColumns;
         this.state.closeAllColumns = this.props.closeAllColumns;
         this.state.saveChanges = this.props.saveChanges;
+        this.state.closeDialog = this.props.closeDialog;
         this.state.blacklistKeywords = this.props.blacklistKeywords;
         this.state.blacklistMaxHashtags = this.props.blacklistMaxHashtags;
         this.state.blacklistMaxMentions = this.props.blacklistMaxMentions;
         this.state.whitelistUsers = this.props.whitelistUsers;
         this.state.whitelistFollowers = this.props.whitelistFollowers;
         this.state.whitelistFollowing = this.props.whitelistFollowing;
+        this.state.show = this.props.show;
     }
 
     render() {
-        return <div className="nav-settings-popup hidden">
+        const CELL_SPACING = 5;
+        return <div id="app-settings-popup" className={`nav-settings-popup ${this.props.show ? "" : "hidden"}`}>
             <div className="nav-settings-popup-heading">Application Settings <span className="nav-settings-close-button" onClick={(event) => {
-                (document.querySelector(".nav-settings-popup") as HTMLElement).classList.toggle("hidden");
-            }}><i
-                className="fa-solid fa-rectangle-xmark"> </i></span></div>
+                this.props.closeDialog(this);
+                // (document.querySelector(".nav-settings-popup") as HTMLElement).classList.toggle("hidden");
+            }}><i className="fa-solid fa-rectangle-xmark"> </i></span></div>
 
             <div className="nav-settings-instructions">Scroll down to see all options,<br/>and to save your changes.</div>
 
             <fieldset>
                 <legend>General&nbsp;&nbsp;<span className="" title={tooltipValues["general"]}><i className="fa-regular fa-circle-question">&nbsp;</i></span></legend>
-                <table>
+                <table cellSpacing={CELL_SPACING}>
                     <tbody>
                         <tr className="nav-settings-row">
                             <td className="nav-settings-indent nav-settings-fill">Theme</td>
@@ -137,7 +144,10 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
                         <tr className="nav-settings-row">
                             <td className="nav-settings-indent nav-settings-fill">Close Columns</td>
                             <td className="nav-settings-right">
-                                <div className="nav-settings-button">CLOSE ALL</div>
+                                <div className="nav-settings-button" onClick={(event) => {
+                                    this.props.closeAllColumns(this);
+                                    event.preventDefault();
+                                }}>CLOSE ALL</div>
                             </td>
                         </tr>
                     </tbody>
@@ -146,7 +156,7 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
 
             <fieldset>
                 <legend>Blacklist&nbsp;&nbsp;<span className="" title={tooltipValues["blacklist"]}><i className="fa-regular fa-circle-question">&nbsp;</i></span></legend>
-                <table>
+                <table cellSpacing={CELL_SPACING}>
                     <tbody>
                         <tr className="nav-settings-row">
                             <td className="nav-settings-indent nav-settings-fill">Keywords</td>
@@ -174,7 +184,7 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
 
             <fieldset>
                 <legend>Whitelist&nbsp;&nbsp;<span className="" title={tooltipValues["whitelist"]}><i className="fa-regular fa-circle-question">&nbsp;</i></span></legend>
-                <table>
+                <table cellSpacing={CELL_SPACING}>
                     <tbody>
                         <tr className="nav-settings-row">
                             <td className="nav-settings-indent nav-settings-fill">Users</td>
@@ -200,7 +210,10 @@ export class AppSettingsPopup extends Component<AppSettingsPopupProps, AppSettin
             </fieldset>
             <div className="nav-settings-button-bottom-row">
                 <div className="nav-settings-button nav-float-right green-button">SAVE</div>
-                <div className="nav-settings-button nav-float-right gray-button">CANCEL</div>
+                <div className="nav-settings-button nav-float-right gray-button"  onClick={(event) => {
+                    this.props.closeDialog(this);
+                    // (document.querySelector(".nav-settings-popup") as HTMLElement).classList.toggle("hidden");
+                }}>CANCEL</div>
                 <div className="nav-settings-button blue-button nav-float-clear">HELP</div>
             </div>
         </div>;

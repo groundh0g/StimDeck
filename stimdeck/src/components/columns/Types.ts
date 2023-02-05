@@ -83,3 +83,18 @@ export type AppSettings = {
     whitelistFollowers: boolean,
     whitelistFollowing: boolean,
 };
+
+export type PopupMode = "add" | "edit";
+// export type ColumnIcons = {[key: string]: string};
+
+export const ColumnIconsByType: {[key: string]: string} = {
+    "explore": "fa-regular fa-compass",
+    "home": "fa-solid fa-house",
+    "profile": "fa-solid fa-user",
+    "notifications": "fa-solid fa-bell",
+    "hashtag": "fa-solid fa-hashtag",
+    "keywords": "fa-solid fa-magnifying-glass",
+    "giveaways": "fa-solid fa-money-bill-1-wave",
+};
+
+export type ActiveDialog = "addColumn" | "editColumn" | "settings" | "none";

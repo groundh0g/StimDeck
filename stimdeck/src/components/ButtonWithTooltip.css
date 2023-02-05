@@ -1,0 +1,41 @@
+
+/* https://www.w3docs.com/snippets/css/how-to-change-the-style-of-the-title-attribute-inside-an-anchor-tag.html */
+
+a.tooltip {
+    /*border-bottom: 1px dashed;*/
+    color: inherit;
+    text-decoration: none;
+}
+
+a.tooltip:hover {
+    cursor: help;
+    position: relative;
+}
+
+a.tooltip span {
+    display: none;
+    text-align: left;
+    clear: both;
+}
+
+a.tooltip span strong {
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+a.tooltip:hover span {
+    border: #666 2px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background: #e3e3e3;
+    margin: 15px;
+    width: 307px;
+    /*position: absolute;*/
+    top: 10%;
+    text-decoration: none;
+
+    clear: both;
+    position: fixed;
+    left: 15px;
+}

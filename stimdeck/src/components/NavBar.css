@@ -30,3 +30,7 @@
     line-height: 40px;
     cursor: pointer;
 }
+
+.nav-settings-button-bottom-row .nav-settings-button {
+    font-weight: bolder;
+}

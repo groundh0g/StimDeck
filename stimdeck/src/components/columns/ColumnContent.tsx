@@ -4,27 +4,28 @@ import React, {Component} from "react";
 import "./ColumnContent.css";
 
 type ColumnContentProps = {
-    foo: number;
+    isActive: boolean;
+    // add more attributes here ...
 };
 
-type ColumnContentState = {
-    foo: number;
+type ColumnContentState = ColumnContentProps & {
+    // add more attributes here ...
 };
 
 export class ColumnContent extends Component<ColumnContentProps, ColumnContentState> {
     state: ColumnContentState = {
-        foo: 0,
+        isActive: false,
     };
 
     constructor(props: ColumnContentProps) {
         super(props);
 
-        this.state.foo = this.props.foo;
+        this.state.isActive = this.props.isActive;
     }
 
     render() {
         return (
-            <div className="col-content">
+            <div className={`col-content ${this.props.isActive ? "col-content-active" : ""}`}>
                 Loading ...
             </div>
         );

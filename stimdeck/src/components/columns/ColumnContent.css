@@ -13,3 +13,7 @@
     border-top: none;
     margin-top: 0;
 }
+
+.col-content-active {
+    border-color: cornflowerblue;
+}
